@@ -1,12 +1,9 @@
 import React, { useState, createContext, FC } from "react";
-import { dictionaryList, Dictionary, Languages } from "./translations";
-
-interface LangContextInterface {
-  dictionary: Dictionary;
-  setLanguage: (arg0: Languages) => void;
-}
+import { dictionaryList } from "./translations";
+import { LangContextInterface, Languages } from "./language.interface";
 
 export const LanguageContext = createContext<LangContextInterface>({
+  language: Languages.ru,
   dictionary: dictionaryList.ru,
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   setLanguage: () => {},
@@ -21,6 +18,7 @@ export const LanguageProvider: FC = ({ children }) => {
   }, []); */
 
   const provider = {
+    language: language,
     dictionary: dictionaryList[language],
     setLanguage,
   };

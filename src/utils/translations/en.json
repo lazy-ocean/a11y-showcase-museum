@@ -1,3 +1,10 @@
 {
-  "logo": "The Pushkin State Museum of Fine Arts"
+  "logo": "The Pushkin State Museum of Fine Arts",
+  "search": "Search something",
+  "searchSubmit": "Submit",
+  "buttons": {
+    "loginButton": "Login",
+    "langButtonRu": "Switch to Russian version",
+    "langButtonEn": "Switch to English version"
+  }
 }
