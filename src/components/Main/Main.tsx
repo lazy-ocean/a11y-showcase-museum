@@ -1,12 +1,16 @@
 import React from "react";
-import { Header, Container } from "./Main.styled";
+import {
+  PrimaryButton,
+  SecondaryButton,
+  GhostButton,
+} from "../Buttons/Buttons";
 
 const Main = () => {
   return (
     <main>
-      <Container>
-        <Header>go build something awesome</Header>
-      </Container>
+      <PrimaryButton>Билеты онлайн</PrimaryButton>
+      <SecondaryButton>Билеты онлайн</SecondaryButton>
+      <GhostButton>Билеты онлайн</GhostButton>
     </main>
   );
 };
