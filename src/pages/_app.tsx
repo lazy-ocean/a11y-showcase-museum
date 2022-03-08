@@ -1,13 +1,16 @@
 import "../../styles/globals.css";
 import { ThemeProvider } from "styled-components";
 import theme from "../components/theme";
-import Main from "../components/Main/Main";
+import Main from "../components/Main";
+import { LanguageProvider } from "../utils/LanguageContext";
 
 const MyApp = () => {
   /*  let testLintIsWorking = ""; */
   return (
     <ThemeProvider theme={theme}>
-      <Main />
+      <LanguageProvider>
+        <Main />
+      </LanguageProvider>
     </ThemeProvider>
   );
 };
