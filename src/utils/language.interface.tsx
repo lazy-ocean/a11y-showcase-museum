@@ -19,12 +19,24 @@ interface Login {
   close: string;
 }
 
+interface Sections {
+  museum: string;
+  visit: string;
+  expositions: string;
+  broadcasts: string;
+}
+
+interface Menus {
+  mainMenu: string;
+}
 export interface Dictionary {
   logo: string;
   buttons: Buttons;
   search: string;
   searchSubmit: string;
   login: Login;
+  sections: Sections;
+  menus: Menus;
 }
 
 export interface Dictionaries {
