@@ -6,15 +6,16 @@ import { StyledHeader, Logo, LoginBtn } from "./Header.styled";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { RiUserLine } from "react-icons/ri";
 import LoginModal from "../LoginModal";
+import useBreakpoint from "../../utils/useBreakpoint";
 
 const Header = () => {
   const { dictionary } = useContext(LanguageContext);
   const [modalIsOpen, setIsModalOpen] = useState(false);
-
+  const { isDesktop } = useBreakpoint();
   return (
     <StyledHeader>
       <Logo src={logo.src} alt={dictionary.logo} />
-      <SearchPanel />
+      {isDesktop && <SearchPanel />}
       <LanguageSwitcher />
       <LoginBtn
         aria-label={dictionary.buttons.loginButton}
