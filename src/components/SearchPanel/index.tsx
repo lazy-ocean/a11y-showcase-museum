@@ -13,6 +13,7 @@ const SearchPanel = () => {
         aria-label={dictionary.search}
         name={dictionary.search}
         spellCheck="false"
+        placeholder={dictionary.search}
       />
       <SearchButton type="submit" value={dictionary.searchSubmit}>
         <AiOutlineSearch />

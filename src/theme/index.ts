@@ -3,6 +3,7 @@ interface Palette {
   secondaryPurple: string;
   white: string;
   dark: string;
+  lightBG: string;
 }
 
 interface Breakpoints {
@@ -11,9 +12,15 @@ interface Breakpoints {
   desktop: string;
 }
 
+interface Spacings {
+  small: string;
+  medium: string;
+}
+
 interface Theme {
   palette: Palette;
   breakpoints: Breakpoints;
+  spacing: Spacings;
 }
 
 const theme: Theme = {
@@ -22,11 +29,16 @@ const theme: Theme = {
     secondaryPurple: "#C7D2E9",
     white: "#ffffff",
     dark: "#242424",
+    lightBG: "#F9F9FB",
   },
   breakpoints: {
     mobile: `(min-width: 600px)`,
     tablet: `(min-width: 810px)`,
     desktop: `(min-width: 1920px)`,
+  },
+  spacing: {
+    small: "1rem",
+    medium: "5rem",
   },
 };
 

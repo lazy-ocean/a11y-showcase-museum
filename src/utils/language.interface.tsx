@@ -10,11 +10,21 @@ interface Buttons {
   langButtonEn: string;
 }
 
+interface Login {
+  heading: string;
+  email: string;
+  password: string;
+  passwordInstruction: string;
+  submit: string;
+  close: string;
+}
+
 export interface Dictionary {
   logo: string;
   buttons: Buttons;
   search: string;
   searchSubmit: string;
+  login: Login;
 }
 
 export interface Dictionaries {
