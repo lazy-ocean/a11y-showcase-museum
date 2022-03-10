@@ -4,70 +4,34 @@ import Tabs, { TabsButton } from "../Tabs";
 import richterImg from "../../../public/schedule-1.png";
 import tattooImg from "../../../public/schedule-2.png";
 import matisseImg from "../../../public/schedule-3.png";
-import {
-  SecondaryHeading,
-  TertiaryHeading,
-  RegularText,
-  Link,
-} from "../Typography";
+import Card from "../Card";
 
 const Expositions = () => {
   const { dictionary } = useContext(LanguageContext);
 
-  const Richter = (
-    <article>
-      <img src={richterImg.src} alt={dictionary.expositions.richter.title} />
-      <SecondaryHeading>
-        {dictionary.expositions.richter.title}
-      </SecondaryHeading>
-      <TertiaryHeading>
-        {dictionary.expositions.richter.subtitle}
-      </TertiaryHeading>
-      <RegularText>{dictionary.expositions.richter.description}</RegularText>
-      <Link
-        aria-label={`${dictionary.expositions.cta} ${dictionary.expositions.richter.title}`}
-        href="#"
-      >
-        {dictionary.expositions.cta}
-      </Link>
-    </article>
-  );
-
-  const Tattoo = (
-    <article>
-      <img src={tattooImg.src} alt={dictionary.expositions.tattoo.title} />
-      <SecondaryHeading>{dictionary.expositions.tattoo.title}</SecondaryHeading>
-      <TertiaryHeading>
-        {dictionary.expositions.tattoo.subtitle}
-      </TertiaryHeading>
-      <RegularText>{dictionary.expositions.tattoo.description}</RegularText>
-      <Link
-        href="#"
-        aria-label={`${dictionary.expositions.cta} ${dictionary.expositions.tattoo.title}`}
-      >
-        {dictionary.expositions.cta}
-      </Link>
-    </article>
-  );
-
-  const Matisse = (
-    <article>
-      <img src={matisseImg.src} alt={dictionary.expositions.matisse.title} />
-      <SecondaryHeading>
-        {dictionary.expositions.matisse.title}
-      </SecondaryHeading>
-      <TertiaryHeading>
-        {dictionary.expositions.matisse.subtitle}
-      </TertiaryHeading>
-      <RegularText>{dictionary.expositions.matisse.description}</RegularText>
-      <Link
-        href="#"
-        aria-label={`${dictionary.expositions.cta} ${dictionary.expositions.matisse.title}`}
-      >
-        {dictionary.expositions.cta}
-      </Link>
-    </article>
-  );
+  const dataMap = {
+    richter: {
+      img: richterImg.src,
+      title: dictionary.expositions.richter.title,
+      subtitle: dictionary.expositions.richter.subtitle,
+      description: dictionary.expositions.richter.description,
+      cta: dictionary.expositions.cta,
+    },
+    tattoo: {
+      img: tattooImg.src,
+      title: dictionary.expositions.tattoo.title,
+      subtitle: dictionary.expositions.tattoo.subtitle,
+      description: dictionary.expositions.tattoo.description,
+      cta: dictionary.expositions.cta,
+    },
+    matisse: {
+      img: matisseImg.src,
+      title: dictionary.expositions.matisse.title,
+      subtitle: dictionary.expositions.matisse.subtitle,
+      description: dictionary.expositions.matisse.description,
+      cta: dictionary.expositions.cta,
+    },
+  };
 
   const buttons: TabsButton[] = [
     { id: 1, title: dictionary.expositions.all },
@@ -76,9 +40,9 @@ const Expositions = () => {
   ];
 
   const content = [
-    { content: Richter, ids: [1, 2] },
-    { content: Tattoo, ids: [1, 2] },
-    { content: Matisse, ids: [1, 3] },
+    { content: <Card {...dataMap.richter} />, ids: [1, 2] },
+    { content: <Card {...dataMap.tattoo} />, ids: [1, 2] },
+    { content: <Card {...dataMap.matisse} />, ids: [1, 3] },
   ];
   return (
     <Tabs
