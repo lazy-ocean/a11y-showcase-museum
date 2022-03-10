@@ -15,8 +15,8 @@ const SearchPanel = () => {
         spellCheck="false"
         placeholder={dictionary.search}
       />
-      <SearchButton type="submit" value={dictionary.searchSubmit}>
-        <AiOutlineSearch />
+      <SearchButton type="submit" title={dictionary.searchSubmit}>
+        <AiOutlineSearch aria-label={dictionary.searchSubmit} />
       </SearchButton>
     </SearchForm>
   );
