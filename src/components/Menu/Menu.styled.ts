@@ -10,7 +10,7 @@ export const MainMenu = styled.nav`
 
   ${({ theme }) => `
     @media only screen and ${theme.breakpoints.tablet}{
-      margin: 7.6rem 0;
+      margin: 7.6rem 0 ${theme.spacing.medium} 0;
   `}
 `;
 

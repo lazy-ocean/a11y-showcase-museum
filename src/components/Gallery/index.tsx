@@ -15,6 +15,7 @@ const Gallery = () => {
         showStatus={false}
         showThumbs={false}
         showIndicators={false}
+        infiniteLoop
         ariaLabel={dictionary.gallery.gallery}
         labels={{
           leftArrow: dictionary.gallery.prev,

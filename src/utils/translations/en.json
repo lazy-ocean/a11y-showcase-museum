@@ -22,7 +22,8 @@
     "broadcasts": "Online broadcasts"
   },
   "menus": {
-    "mainMenu": "Main menu"
+    "mainMenu": "Main menu",
+    "buttonsMenu": "What you can do here"
   },
   "gallery": {
     "title": "What's going on in Museum",
@@ -30,5 +31,10 @@
     "next": "Next slide",
     "current": "Current slide",
     "gallery": "Events gallery"
+  },
+  "ctas": {
+    "buy": "Buy a ticket online",
+    "friend": "Become a friend",
+    "shop": "Online shop"
   }
 }

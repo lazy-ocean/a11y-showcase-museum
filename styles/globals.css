@@ -23,6 +23,11 @@ ul {
   box-sizing: border-box;
 }
 
+*:focus {
+  outline-offset: 2px;
+  outline: 3px solid rebeccapurple;
+}
+
 .visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -32,6 +37,10 @@ ul {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+.carousel .control-arrow:focus {
+  outline: 3px solid rebeccapurple !important;
 }
 
 @media only screen and (max-width: 1200px) {

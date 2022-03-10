@@ -28,6 +28,7 @@ interface Sections {
 
 interface Menus {
   mainMenu: string;
+  buttonsMenu: string;
 }
 
 interface Gallery {
@@ -36,6 +37,12 @@ interface Gallery {
   next: string;
   current: string;
   gallery: string;
+}
+
+interface CTAS {
+  buy: string;
+  friend: string;
+  shop: string;
 }
 
 export interface Dictionary {
@@ -47,6 +54,7 @@ export interface Dictionary {
   sections: Sections;
   menus: Menus;
   gallery: Gallery;
+  ctas: CTAS;
 }
 
 export interface Dictionaries {
