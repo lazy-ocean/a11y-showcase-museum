@@ -8,7 +8,7 @@ import heroBanner3 from "../../../public/hero-banner3.jpeg";
 const Gallery = () => {
   const { dictionary } = useContext(LanguageContext);
   return (
-    <>
+    <section>
       <h1 className="visually-hidden">{dictionary.gallery.title}</h1>
       <Carousel
         showArrows
@@ -36,7 +36,7 @@ const Gallery = () => {
           src={heroBanner3.src}
         />
       </Carousel>
-    </>
+    </section>
   );
 };
 
