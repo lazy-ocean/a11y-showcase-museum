@@ -45,6 +45,23 @@ interface CTAS {
   shop: string;
 }
 
+interface Expo {
+  title: string;
+  subtitle: string;
+  description: string;
+}
+
+interface Expositions {
+  richter: Expo;
+  tattoo: Expo;
+  matisse: Expo;
+  cta: string;
+  show: string;
+  all: string;
+  now: string;
+  planned: string;
+}
+
 export interface Dictionary {
   logo: string;
   buttons: Buttons;
@@ -55,6 +72,7 @@ export interface Dictionary {
   menus: Menus;
   gallery: Gallery;
   ctas: CTAS;
+  expositions: Expositions;
 }
 
 export interface Dictionaries {

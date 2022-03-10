@@ -36,5 +36,27 @@
     "buy": "Buy a ticket online",
     "friend": "Become a friend",
     "shop": "Online shop"
+  },
+  "expositions": {
+    "cta": "Buy a ticket",
+    "show": "Show",
+    "all": "All",
+    "now": "On display",
+    "planned": "Planned",
+    "richter": {
+      "title": "Svyatoslav Richter with friends. Moscow - Koktebel",
+      "subtitle": "On display until May 15",
+      "description": "Richter's masterpieces are exhibited for the first time in the Pushkin Museum"
+    },
+    "tattoo": {
+      "title": "Tattoo",
+      "subtitle": "On display until September 27",
+      "description": "Tattoo throughout the years"
+    },
+    "matisse": {
+      "title": "From Dürer to Matisse",
+      "subtitle": "Coming up November 1",
+      "description": "Selected drawings from the collection of the Pushkin Museum"
+    }
   }
 }
