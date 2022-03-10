@@ -1,16 +1,13 @@
 import React from "react";
-import {
-  PrimaryButton,
-  SecondaryButton,
-  GhostButton,
-} from "../Buttons/Buttons";
+import Gallery from "../Gallery";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Main = () => {
   return (
     <main>
-      <PrimaryButton>Билеты онлайн</PrimaryButton>
-      <SecondaryButton>Билеты онлайн</SecondaryButton>
-      <GhostButton>Билеты онлайн</GhostButton>
+      <section>
+        <Gallery />
+      </section>
     </main>
   );
 };

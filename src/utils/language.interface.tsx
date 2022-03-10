@@ -29,6 +29,15 @@ interface Sections {
 interface Menus {
   mainMenu: string;
 }
+
+interface Gallery {
+  title: string;
+  prev: string;
+  next: string;
+  current: string;
+  gallery: string;
+}
+
 export interface Dictionary {
   logo: string;
   buttons: Buttons;
@@ -37,6 +46,7 @@ export interface Dictionary {
   login: Login;
   sections: Sections;
   menus: Menus;
+  gallery: Gallery;
 }
 
 export interface Dictionaries {

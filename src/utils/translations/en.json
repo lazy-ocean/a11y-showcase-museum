@@ -23,5 +23,12 @@
   },
   "menus": {
     "mainMenu": "Main menu"
+  },
+  "gallery": {
+    "title": "What's going on in Museum",
+    "prev": "Previous slide",
+    "next": "Next slide",
+    "current": "Current slide",
+    "gallery": "Events gallery"
   }
 }
