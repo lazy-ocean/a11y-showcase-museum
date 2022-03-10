@@ -16,7 +16,7 @@ const SearchPanel = () => {
         placeholder={dictionary.search}
       />
       <SearchButton type="submit" title={dictionary.searchSubmit}>
-        <AiOutlineSearch aria-label={dictionary.searchSubmit} />
+        <AiOutlineSearch aria-hidden="true" />
       </SearchButton>
     </SearchForm>
   );

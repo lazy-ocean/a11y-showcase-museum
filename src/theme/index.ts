@@ -4,6 +4,7 @@ interface Palette {
   white: string;
   dark: string;
   lightBG: string;
+  grey: string;
 }
 
 interface Breakpoints {
@@ -31,11 +32,12 @@ const theme: Theme = {
     white: "#ffffff",
     dark: "#242424",
     lightBG: "#F9F9FB",
+    grey: "#F1F1F1",
   },
   breakpoints: {
     mobile: `(min-width: 600px)`,
     tablet: `(min-width: 810px)`,
-    desktop: `(min-width: 1920px)`,
+    desktop: `(min-width: 1200px)`,
   },
   spacing: {
     small: "1rem",

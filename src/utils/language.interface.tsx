@@ -76,6 +76,19 @@ interface Museums {
   historyText: string;
 }
 
+interface Footer {
+  a11y: string;
+  ticketing: string;
+  anticorruption: string;
+  facebook: string;
+  telegram: string;
+  email: string;
+  subscribeHeader: string;
+  subscribe: string;
+  gdpr: string;
+  social: string;
+}
+
 export interface Dictionary {
   logo: string;
   buttons: Buttons;
@@ -88,6 +101,7 @@ export interface Dictionary {
   ctas: CTAS;
   expositions: Expositions;
   museums: Museums;
+  footer: Footer;
 }
 
 export interface Dictionaries {

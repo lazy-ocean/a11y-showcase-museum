@@ -5,6 +5,7 @@ import Main from "../components/Main";
 import Header from "../components/Header";
 import Menu from "../components/Menu";
 import { LanguageProvider } from "../utils/LanguageContext";
+import Footer from "../components/Footer";
 
 const MyApp = () => {
   /*  let testLintIsWorking = ""; */
@@ -14,6 +15,7 @@ const MyApp = () => {
         <Header />
         <Menu />
         <Main />
+        <Footer />
       </LanguageProvider>
     </ThemeProvider>
   );

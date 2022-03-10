@@ -21,7 +21,7 @@ const Header = () => {
         aria-label={dictionary.buttons.loginButton}
         onClick={() => setIsModalOpen(true)}
       >
-        <RiUserLine />
+        <RiUserLine aria-hidden="true" />
       </LoginBtn>
       <LoginModal
         isOpen={modalIsOpen}

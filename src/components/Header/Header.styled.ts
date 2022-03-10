@@ -3,6 +3,12 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
   width: 100%;
   display: flex;
+  padding: 3rem 3rem 0 3rem;
+
+  ${({ theme }) => `
+  @media only screen and ${theme.breakpoints.desktop}{
+    padding: 4rem 20rem 0 20rem;
+`}
 `;
 
 export const Logo = styled.img`

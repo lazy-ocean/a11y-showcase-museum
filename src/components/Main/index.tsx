@@ -4,15 +4,16 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CTAPanel from "../CTAPanel";
 import Expositions from "../Expositions";
 import Museums from "../Museums";
+import { MainStyled } from "./Main.styled";
 
 const Main = () => {
   return (
-    <main>
+    <MainStyled>
       <Gallery />
       <CTAPanel />
       <Expositions />
       <Museums />
-    </main>
+    </MainStyled>
   );
 };
 
