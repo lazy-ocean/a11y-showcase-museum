@@ -58,5 +58,36 @@
       "subtitle": "Coming up November 1",
       "description": "Selected drawings from the collection of the Pushkin Museum"
     }
+  },
+  "museums": {
+    "cta": "Show more",
+    "show": "Show",
+    "buildings": "Building",
+    "history": "History",
+    "richter": {
+      "title": "SVIATOSLAV RICHTER MEMORIAL APARTMENT",
+      "description": "Bolshaya Bronnaya Street 2/6, Apt. 58, Floor 16"
+    },
+    "museion": {
+      "title": "MUSEION",
+      "description": "Kolymazhny Pereulok Bldg. 6/2/3"
+    },
+    "lopuchiny": {
+      "title": "THE LOPUKHINS MANOR",
+      "description": "Maly Znamenski lane, 3/5"
+    },
+    "learning": {
+      "title": "EDUCATIONAL ART MUSEUM",
+      "description": "Chayanova Street 15"
+    },
+    "privates": {
+      "title": "PRIVATE COLLECTIONS",
+      "description": "Volkhonka 10"
+    },
+    "gallery": {
+      "title": "GALLERY",
+      "description": "Volkhonka 14"
+    },
+    "historyText": "The Pushkin State Museum of Fine Arts is a museum complex that is currently in possession of one of the largest world art collections from Ancient Egypt and Greece to our days. It was opened in 1912. Today the holdings of the museum contain around 700 000 art works. In the Main building exhibits paintings, prints and drawings, sculpture, applied art, numismatics archaeology and Tsvetaev collection of plaster cast reproductions.<br/><br/>Due to the active scientific, research and exhibition activities, music festivals, artistic and educational work with adults and children The Pushkin Museum is now one of the most important cultural centers of Russia, which is visited by more than one million people per year.<br/><br/>At the start of 2017 the museum decided on a new area of activity – Pushkin Museum XXI, – focusing on contemporary Russian andWestern art in all its aspects – exhibitions, education and research. Consequently, the Pushkin State Museum of Fine Arts is an open and interactive stage, showcasing developments in world culture from antiquity to the present, a living space to receive knowledge and communication bringing back childhood memories."
   }
 }

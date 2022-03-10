@@ -45,21 +45,35 @@ interface CTAS {
   shop: string;
 }
 
-interface Expo {
+interface Card {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   description: string;
 }
 
 interface Expositions {
-  richter: Expo;
-  tattoo: Expo;
-  matisse: Expo;
+  richter: Card;
+  tattoo: Card;
+  matisse: Card;
   cta: string;
   show: string;
   all: string;
   now: string;
   planned: string;
+}
+
+interface Museums {
+  richter: Card;
+  museion: Card;
+  lopuchiny: Card;
+  learning: Card;
+  privates: Card;
+  gallery: Card;
+  cta: string;
+  show: string;
+  buildings: string;
+  history: string;
+  historyText: string;
 }
 
 export interface Dictionary {
@@ -73,6 +87,7 @@ export interface Dictionary {
   gallery: Gallery;
   ctas: CTAS;
   expositions: Expositions;
+  museums: Museums;
 }
 
 export interface Dictionaries {

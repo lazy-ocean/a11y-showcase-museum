@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useMemo } from "react";
 import { LanguageContext } from "../../utils/LanguageContext";
 import { PrimaryHeading } from "../Typography";
 import { SecondaryButton, GhostButton } from "../Buttons/Buttons";
@@ -22,6 +22,10 @@ interface TabsProps {
 const Tabs = ({ title, buttons, content }: TabsProps) => {
   const [activeTab, setActiveTab] = useState(buttons[0].id);
   const { dictionary } = useContext(LanguageContext);
+  const activeContent = useMemo(
+    () => content.filter((c: TabsContent) => c.ids.includes(activeTab)),
+    [activeTab, content]
+  );
 
   return (
     <TabsSection>
@@ -47,11 +51,7 @@ const Tabs = ({ title, buttons, content }: TabsProps) => {
           )
         )}
       </TabsButtons>
-      <TabsContent>
-        {content
-          .filter((c: TabsContent) => c.ids.includes(activeTab))
-          .map((c) => c.content)}
-      </TabsContent>
+      <TabsContent>{activeContent.map((c) => c.content)}</TabsContent>
     </TabsSection>
   );
 };
