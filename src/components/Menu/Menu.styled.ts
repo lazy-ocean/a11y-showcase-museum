@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const MainMenu = styled.ul`
+export const MainMenu = styled.nav`
   display: flex;
   gap: 4rem;
   padding: 0;
   margin: 4rem 0;
   flex-wrap: wrap;
+  list-style-type: none;
 
   ${({ theme }) => `
     @media only screen and ${theme.breakpoints.tablet}{
