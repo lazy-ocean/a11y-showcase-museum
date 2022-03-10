@@ -15,6 +15,7 @@ interface Breakpoints {
 interface Spacings {
   small: string;
   medium: string;
+  huge: string;
 }
 
 interface Theme {
@@ -38,7 +39,8 @@ const theme: Theme = {
   },
   spacing: {
     small: "1rem",
-    medium: "5rem",
+    medium: "4rem",
+    huge: "12rem",
   },
 };
 
