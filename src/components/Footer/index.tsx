@@ -1,9 +1,17 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../utils/LanguageContext";
-import { StyledFooter, FooterMenu, SocialMedia } from "./Footer.styled";
+import {
+  StyledFooter,
+  FooterMenu,
+  SocialMedia,
+  SubscribeInput,
+  SubscribeBtn,
+  Wrapper,
+  Checkbox,
+} from "./Footer.styled";
 import { BsFacebook, BsTelegram } from "react-icons/bs";
 import { ImMail4 } from "react-icons/im";
-import { TertiaryHeading } from "../Typography";
+import { TertiaryHeading, RegularText } from "../Typography";
 
 const Footer = () => {
   const { dictionary } = useContext(LanguageContext);
@@ -50,11 +58,24 @@ const Footer = () => {
         </div>
       </div>
       <form action="">
-        <h3>{dictionary.footer.subscribeHeader}</h3>
-        <input type="emal" name={dictionary.login.email} id="" />
-        <button type="submit">{dictionary.footer.subscribe}</button>
-        <input type="checkbox" name={dictionary.footer.gdpr} id="gdpr" />
-        <label htmlFor="gdpr">{dictionary.footer.gdpr}</label>
+        <TertiaryHeading>{dictionary.footer.subscribeHeader}</TertiaryHeading>
+        <Wrapper>
+          <SubscribeInput
+            type="emal"
+            name={dictionary.login.email}
+            id=""
+            placeholder={dictionary.login.email}
+          />
+          <SubscribeBtn type="submit">
+            {dictionary.footer.subscribe}
+          </SubscribeBtn>
+        </Wrapper>
+        <Wrapper>
+          <Checkbox type="checkbox" name={dictionary.footer.gdpr} id="gdpr" />
+          <RegularText as="label" htmlFor="gdpr">
+            {dictionary.footer.gdpr}
+          </RegularText>
+        </Wrapper>
       </form>
     </StyledFooter>
   );
