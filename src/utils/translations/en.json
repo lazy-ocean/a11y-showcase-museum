@@ -101,5 +101,9 @@
     "subscribe": "Subscribe",
     "gdpr": "Allow to collect my personal data",
     "social": "Museum in social media"
+  },
+  "meta": {
+    "title": "The Pushkin Museum",
+    "description": "The official website of The Pushkin State Museum of Fine Arts (Moscow), wich collection of French art of the XIX – XX centuries is one of the most famous collections of Impressionist and Post-Impressionist paintings in the world."
   }
 }

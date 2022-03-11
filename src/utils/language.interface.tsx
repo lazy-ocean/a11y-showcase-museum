@@ -89,6 +89,11 @@ interface Footer {
   social: string;
 }
 
+interface Meta {
+  title: string;
+  description: string;
+}
+
 export interface Dictionary {
   logo: string;
   buttons: Buttons;
@@ -100,8 +105,9 @@ export interface Dictionary {
   gallery: Gallery;
   ctas: CTAS;
   expositions: Expositions;
-  museums: Museums;
-  footer: Footer;
+  museums?: Museums;
+  footer?: Footer;
+  meta?: Meta;
 }
 
 export interface Dictionaries {

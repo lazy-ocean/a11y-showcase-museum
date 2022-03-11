@@ -3,6 +3,7 @@ import { SecondaryButton } from "../Buttons/Buttons";
 import { LanguageContext } from "../../utils/LanguageContext";
 import { Languages } from "../../utils/language.interface";
 import { LangWrapper } from "./LanguageSwitcher.styled";
+import Link from "next/link";
 
 const LanguageSwitcher = () => {
   const { language, dictionary, setLanguage } = useContext(LanguageContext);
@@ -14,7 +15,9 @@ const LanguageSwitcher = () => {
         emphasized={language === Languages.ru}
         aria-label={dictionary.buttons.langButtonRu}
       >
-        RU
+        <Link locale="ru" href="/">
+          RU
+        </Link>
       </SecondaryButton>
       <SecondaryButton
         onClick={() => setLanguage(Languages.en)}
@@ -22,7 +25,9 @@ const LanguageSwitcher = () => {
         emphasized={language === Languages.en}
         aria-label={dictionary.buttons.langButtonEn}
       >
-        EN
+        <Link locale="en" href="/">
+          EN
+        </Link>
       </SecondaryButton>
     </LangWrapper>
   );
