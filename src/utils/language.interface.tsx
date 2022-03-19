@@ -10,6 +10,10 @@ interface Buttons {
   langButtonEn: string;
 }
 
+interface Errors {
+  password: string;
+  email: string;
+}
 interface Login {
   heading: string;
   email: string;
@@ -17,6 +21,7 @@ interface Login {
   passwordInstruction: string;
   submit: string;
   close: string;
+  errors: Errors;
 }
 
 interface Sections {
@@ -106,7 +111,7 @@ export interface Dictionary {
   ctas: CTAS;
   expositions: Expositions;
   museums?: Museums;
-  footer?: Footer;
+  footer: Footer;
   meta?: Meta;
 }
 

@@ -61,9 +61,8 @@ const Footer = () => {
         <TertiaryHeading>{dictionary.footer.subscribeHeader}</TertiaryHeading>
         <Wrapper>
           <SubscribeInput
-            type="emal"
+            type="email"
             name={dictionary.login.email}
-            id=""
             placeholder={dictionary.login.email}
           />
           <SubscribeBtn type="submit">

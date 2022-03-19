@@ -1,4 +1,4 @@
-import React, { Dispatch, useContext } from "react";
+import React, { Dispatch, useContext, useState } from "react";
 import { LanguageContext } from "../../utils/LanguageContext";
 import Modal from "react-modal";
 import { ModalStyles, Heading, ModalHeader, CloseBtn } from "./Modal.styled";

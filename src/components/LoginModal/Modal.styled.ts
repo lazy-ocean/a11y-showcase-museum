@@ -15,6 +15,7 @@ export const ModalStyles = {
   },
   overlay: {
     backgroundColor: "#0000006E",
+    zIndex: 100,
   },
 };
 
@@ -39,7 +40,7 @@ export const LoginInput = styled.input`
   background-color: ${({ theme }) => theme.palette.lightBG};
 `;
 
-export const PasswordInstruction = styled.span`
+export const ErrorMessage = styled.span`
   margin-top: ${({ theme }) => theme.spacing.small};
   font-size: 1.6rem;
 `;
