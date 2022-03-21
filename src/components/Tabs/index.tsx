@@ -51,7 +51,11 @@ const Tabs = ({ title, buttons, content }: TabsProps) => {
           )
         )}
       </TabsButtons>
-      <TabsContent>{activeContent.map((c) => c.content)}</TabsContent>
+      <TabsContent>
+        {activeContent.map((c, i) => (
+          <React.Fragment key={i}>{c.content}</React.Fragment>
+        ))}
+      </TabsContent>
     </TabsSection>
   );
 };
