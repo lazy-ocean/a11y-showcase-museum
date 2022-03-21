@@ -1,81 +1,72 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../utils/LanguageContext";
-import {
-  StyledFooter,
-  FooterMenu,
-  SocialMedia,
-  SubscribeInput,
-  SubscribeBtn,
-  Wrapper,
-  Checkbox,
-} from "./Footer.styled";
+import { StyledFooter, FooterMenu, SocialMedia } from "./Footer.styled";
 import { BsFacebook, BsTelegram } from "react-icons/bs";
 import { ImMail4 } from "react-icons/im";
-import { TertiaryHeading, RegularText } from "../Typography";
+import { TertiaryHeading } from "../Typography";
+import SubscriptionForm from "./SubscriptionForm";
+
+interface FooterMenuItem {
+  link: string;
+  label: string;
+  icon?: React.ReactElement;
+}
 
 const Footer = () => {
   const { dictionary } = useContext(LanguageContext);
+
+  const footerMenuItems: FooterMenuItem[] = [
+    { link: "#", label: dictionary.footer.a11y },
+    { link: "#", label: dictionary.footer.ticketing },
+    { link: "#", label: dictionary.footer.anticorruption },
+  ];
+
+  const socialMediaItems: FooterMenuItem[] = [
+    {
+      link: "#",
+      label: dictionary.footer.facebook,
+      icon: <BsFacebook aria-hidden="true" />,
+    },
+    {
+      link: "#",
+      label: dictionary.footer.telegram,
+      icon: <BsTelegram aria-hidden="true" />,
+    },
+    {
+      link: "#",
+      label: dictionary.footer.email,
+      icon: <ImMail4 aria-hidden="true" />,
+    },
+  ];
 
   return (
     <StyledFooter>
       <div>
         <FooterMenu>
-          <li>
-            <a href="#" aria-label={dictionary.footer.a11y}>
-              {dictionary.footer.a11y}
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label={dictionary.footer.ticketing}>
-              {dictionary.footer.ticketing}
-            </a>
-          </li>
-          <li>
-            <a href="#" aria-label={dictionary.footer.anticorruption}>
-              {dictionary.footer.anticorruption}
-            </a>
-          </li>
+          {footerMenuItems.map(({ link, label }: FooterMenuItem, i) => (
+            <li key={`footer-menu-${i}`}>
+              <a href={link} aria-label={label}>
+                {label}
+              </a>
+            </li>
+          ))}
         </FooterMenu>
         <div>
           <TertiaryHeading>{dictionary.footer.social}</TertiaryHeading>
           <SocialMedia aria-label={dictionary.footer.social}>
-            <li>
-              <a href="#" aria-label={dictionary.footer.facebook}>
-                <BsFacebook aria-hidden="true" />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label={dictionary.footer.telegram}>
-                <BsTelegram aria-hidden="true" />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label={dictionary.footer.email}>
-                <ImMail4 aria-hidden="true" />
-              </a>
-            </li>
+            {socialMediaItems.map(
+              ({ link, label, icon }: FooterMenuItem, i) => (
+                <li key={`social-media-${i}`}>
+                  <a href={link} aria-label={label}>
+                    {icon}
+                  </a>
+                </li>
+              )
+            )}
           </SocialMedia>
         </div>
       </div>
-      <form action="">
-        <TertiaryHeading>{dictionary.footer.subscribeHeader}</TertiaryHeading>
-        <Wrapper>
-          <SubscribeInput
-            type="email"
-            name={dictionary.login.email}
-            placeholder={dictionary.login.email}
-          />
-          <SubscribeBtn type="submit">
-            {dictionary.footer.subscribe}
-          </SubscribeBtn>
-        </Wrapper>
-        <Wrapper>
-          <Checkbox type="checkbox" name={dictionary.footer.gdpr} id="gdpr" />
-          <RegularText as="label" htmlFor="gdpr">
-            {dictionary.footer.gdpr}
-          </RegularText>
-        </Wrapper>
-      </form>
+      <SubscriptionForm />
     </StyledFooter>
   );
 };
