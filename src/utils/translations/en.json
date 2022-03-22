@@ -103,7 +103,7 @@
     "email": "Email",
     "subscribeHeader": "Subscribe to our news",
     "subscribe": "Subscribe",
-    "gdpr": "Allow to collect my personal data",
+    "gdpr": "Allow to collect my personal data (required)",
     "social": "Museum in social media"
   },
   "meta": {
