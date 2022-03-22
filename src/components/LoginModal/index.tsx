@@ -28,6 +28,7 @@ const LoginModal = ({ isOpen, setIsOpen }: LoginModalProps) => {
         <Heading id="modalheading">{dictionary.login.heading}</Heading>
         <CloseBtn
           aria-label={dictionary.login.close}
+          title={dictionary.login.close}
           onClick={() => setIsOpen(false)}
         >
           X

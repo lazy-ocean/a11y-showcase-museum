@@ -30,17 +30,21 @@ const Footer = () => {
     {
       link: "#",
       label: dictionary.footer.facebook,
-      icon: <BsFacebook aria-hidden="true" />,
+      icon: (
+        <BsFacebook aria-hidden="true" title={dictionary.footer.facebook} />
+      ),
     },
     {
       link: "#",
       label: dictionary.footer.telegram,
-      icon: <BsTelegram aria-hidden="true" />,
+      icon: (
+        <BsTelegram aria-hidden="true" title={dictionary.footer.facebook} />
+      ),
     },
     {
       link: "#",
       label: dictionary.footer.email,
-      icon: <ImMail4 aria-hidden="true" />,
+      icon: <ImMail4 aria-hidden="true" title={dictionary.footer.facebook} />,
     },
   ];
 
