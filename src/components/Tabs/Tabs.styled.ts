@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { SecondaryHeading } from "../Typography";
 
 export const TabsSection = styled.section`
-  margin-top: ${({ theme }) => theme.spacing.huge};
+  margin-top: ${({ theme }) => theme.spacing.xxl};
 `;
 
 export const TabsButtons = styled.div`
-  margin: ${({ theme }) => theme.spacing.medium} 0;
+  margin: ${({ theme }) => theme.spacing.m} 0;
 `;
 
 interface TabsContentProps {
@@ -17,7 +17,7 @@ export const TabsContent = styled.div<TabsContentProps>`
   display: grid;
   grid-template-columns: ${({ oneColumn }) =>
     oneColumn ? "1fr" : "1fr 1fr 1fr"};
-  gap: ${({ theme }) => theme.spacing.medium};
+  gap: ${({ theme }) => theme.spacing.m};
   grid-template-areas: "history history history";
 
   ${SecondaryHeading} {

@@ -13,7 +13,7 @@ const Button = css<ButtonProps>`
   transition: all 0.4s ease-out;
   cursor: pointer;
   font-size: 1.8rem;
-  border-radius: 8px;
+  border-radius: ${({ theme }) => theme.radius};
 
   ${({ emphasized }) =>
     emphasized &&

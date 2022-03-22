@@ -14,15 +14,17 @@ interface Breakpoints {
 }
 
 interface Spacings {
-  small: string;
-  medium: string;
-  huge: string;
+  xs: string;
+  s: string;
+  m: string;
+  xxl: string;
 }
 
 interface Theme {
   palette: Palette;
   breakpoints: Breakpoints;
   spacing: Spacings;
+  radius: string;
 }
 
 const theme: Theme = {
@@ -40,10 +42,12 @@ const theme: Theme = {
     desktop: `(min-width: 1200px)`,
   },
   spacing: {
-    small: "1rem",
-    medium: "4rem",
-    huge: "12rem",
+    xs: "1rem",
+    s: "2rem",
+    m: "4rem",
+    xxl: "12rem",
   },
+  radius: "8px",
 };
 
 export default theme;

@@ -8,7 +8,7 @@ export const ModalStyles = {
     left: "50%",
     transform: "translate(-50%, -50%)",
     width: "fit-content",
-    padding: "7rem 15rem",
+    padding: "8rem 12rem",
     height: "max-content",
     borderRadius: "8px",
     maxWidth: "80rem",
@@ -22,26 +22,26 @@ export const ModalStyles = {
 export const LoginField = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: ${({ theme }) => theme.spacing.medium};
+  margin-bottom: ${({ theme }) => theme.spacing.m};
 `;
 
 export const LoginLabel = styled.label`
   font-size: 2rem;
-  margin-bottom: ${({ theme }) => theme.spacing.small};
+  margin-bottom: ${({ theme }) => theme.spacing.xs};
 `;
 
 export const LoginInput = styled.input`
   width: 50rem;
   height: 6.5rem;
-  border-radius: 8px;
+  border-radius: border-radius: ${({ theme }) => theme.radius};
   border: 1px solid #c7d2e9;
-  padding: 2rem;
+  padding: ${({ theme }) => theme.spacing.s};
   font-size: 3rem;
   background-color: ${({ theme }) => theme.palette.lightBG};
 `;
 
 export const ErrorMessage = styled.span`
-  margin-top: ${({ theme }) => theme.spacing.small};
+  margin-top: ${({ theme }) => theme.spacing.xs};
   font-size: 1.6rem;
 `;
 
@@ -50,7 +50,7 @@ export const LoginButton = styled(SecondaryButton)`
 `;
 
 export const Heading = styled(PrimaryHeading)`
-  margin-bottom: ${({ theme }) => theme.spacing.medium};
+  margin-bottom: ${({ theme }) => theme.spacing.m};
 `;
 
 export const ModalHeader = styled.div`
