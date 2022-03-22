@@ -1,6 +1,11 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../utils/LanguageContext";
-import { StyledFooter, FooterMenu, SocialMedia } from "./Footer.styled";
+import {
+  StyledFooter,
+  FooterMenu,
+  SocialMedia,
+  FooterMenuLink,
+} from "./Footer.styled";
 import { BsFacebook, BsTelegram } from "react-icons/bs";
 import { ImMail4 } from "react-icons/im";
 import { TertiaryHeading } from "../Typography";
@@ -45,9 +50,9 @@ const Footer = () => {
         <FooterMenu>
           {footerMenuItems.map(({ link, label }: FooterMenuItem, i) => (
             <li key={`footer-menu-${i}`}>
-              <a href={link} aria-label={label}>
+              <FooterMenuLink href={link} aria-label={label}>
                 {label}
-              </a>
+              </FooterMenuLink>
             </li>
           ))}
         </FooterMenu>

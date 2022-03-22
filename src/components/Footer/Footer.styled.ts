@@ -25,6 +25,14 @@ export const FooterMenu = styled.nav`
   margin-bottom: ${({ theme }) => theme.spacing.m};
 `;
 
+export const FooterMenuLink = styled.a`
+  transition: all 0.2s;
+
+  &:hover {
+    border-bottom: 2.5px dashed ${({ theme }) => theme.palette.mainPurple};
+  }
+`;
+
 export const SocialMedia = styled.ul`
   display: flex;
   margin-top: ${({ theme }) => theme.spacing.xs};
@@ -34,6 +42,11 @@ export const SocialMedia = styled.ul`
   svg {
     width: 40px;
     height: 40px;
+    transition: all 0.2s;
+
+    &:hover {
+      fill: ${({ theme }) => theme.palette.mainPurple};
+    }
   }
 `;
 
@@ -41,7 +54,7 @@ export const SubscribeInput = styled.input`
   background-color: transparent;
   border: none;
   border-bottom: 1px solid black;
-  padding: 0 0 1rem 0;
+  padding: ${({ theme }) => theme.spacing.xs} 0;
   margin: ${({ theme }) => theme.spacing.xs};
   margin-left: 0;
   font-size: 1.8rem;
@@ -49,6 +62,7 @@ export const SubscribeInput = styled.input`
 `;
 
 export const SubscribeBtn = styled(PrimaryButton)`
+  margin: ${({ theme }) => theme.spacing.xs};
   padding: ${({ theme }) => `${theme.spacing.xs} ${theme.spacing.s}`};
   align-self: baseline;
 `;

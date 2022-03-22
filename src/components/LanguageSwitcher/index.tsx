@@ -9,26 +9,26 @@ const LanguageSwitcher = () => {
   const { language, dictionary, setLanguage } = useContext(LanguageContext);
   return (
     <LangWrapper>
-      <SecondaryButton
-        onClick={() => setLanguage(Languages.ru)}
-        small
-        emphasized={language === Languages.ru}
-        aria-label={dictionary.buttons.langButtonRu}
-      >
-        <Link locale="ru" href="/">
+      <Link locale="ru" href="/" passHref>
+        <SecondaryButton
+          onClick={() => setLanguage(Languages.ru)}
+          small
+          emphasized={language === Languages.ru}
+          aria-label={dictionary.buttons.langButtonRu}
+        >
           RU
-        </Link>
-      </SecondaryButton>
-      <SecondaryButton
-        onClick={() => setLanguage(Languages.en)}
-        small
-        emphasized={language === Languages.en}
-        aria-label={dictionary.buttons.langButtonEn}
-      >
-        <Link locale="en" href="/">
+        </SecondaryButton>
+      </Link>
+      <Link locale="en" href="/" passHref>
+        <SecondaryButton
+          onClick={() => setLanguage(Languages.en)}
+          small
+          emphasized={language === Languages.en}
+          aria-label={dictionary.buttons.langButtonEn}
+        >
           EN
-        </Link>
-      </SecondaryButton>
+        </SecondaryButton>
+      </Link>
     </LangWrapper>
   );
 };

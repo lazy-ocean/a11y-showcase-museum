@@ -14,6 +14,7 @@ const Button = css<ButtonProps>`
   cursor: pointer;
   font-size: 1.8rem;
   border-radius: ${({ theme }) => theme.radius};
+  border: none;
 
   ${({ emphasized }) =>
     emphasized &&
@@ -28,7 +29,10 @@ export const PrimaryButton = styled.button`
   ${({ theme }) => `
     background-color: ${theme.palette.mainPurple};
     color: ${theme.palette.white};
-    border: none;
+
+    &:hover {
+      background-color: ${theme.palette.darkPurple};
+    }
   `};
 `;
 
@@ -38,7 +42,10 @@ export const SecondaryButton = styled.button`
   ${({ theme }) => `
     background-color: ${theme.palette.secondaryPurple};
     color: ${theme.palette.dark};
-    border: none;
+
+    &:hover {
+      background-color: ${theme.palette.lightPurple};
+    }
   `};
 `;
 
@@ -46,9 +53,17 @@ export const GhostButton = styled.button`
   ${Button};
   text-decoration: underline;
 
+  &:hover {
+    text-decoration-style: dashed;
+  }
+
   ${({ theme }) => `
     background-color: transparent;
     color: ${theme.palette.dark};
-    border: none;
+
+    &:hover {
+      text-decoration-style: dashed;
+      color: ${theme.palette.mainPurple};
+    }
   `};
 `;

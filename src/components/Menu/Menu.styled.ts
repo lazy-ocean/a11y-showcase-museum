@@ -21,9 +21,18 @@ export const MainMenu = styled.nav`
 
 export const MenuItem = styled.li`
   font-size: 1.8rem;
+  transition: all 0.4s;
 
   a {
     padding-bottom: 5px;
     border-bottom: 2px solid ${({ theme }) => theme.palette.mainPurple};
+
+    &:hover {
+      border-bottom: 2.5px dashed ${({ theme }) => theme.palette.mainPurple};
+    }
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.palette.mainPurple};
   }
 `;

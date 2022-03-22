@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import {
   SecondaryHeading,
   TertiaryHeading,
@@ -14,8 +15,20 @@ interface CardProps {
   cta: string;
 }
 
+const StyledCard = styled.article`
+  cursor: default;
+  transition: all 0.2s;
+
+  &:hover {
+    a,
+    h2 {
+      color: ${({ theme }) => theme.palette.mainPurple};
+    }
+  }
+`;
+
 const Card = ({ img, title, subtitle, description, cta }: CardProps) => (
-  <article>
+  <StyledCard>
     <img src={img} alt={title} />
     <SecondaryHeading>{title}</SecondaryHeading>
     <TertiaryHeading>{subtitle}</TertiaryHeading>
@@ -23,7 +36,7 @@ const Card = ({ img, title, subtitle, description, cta }: CardProps) => (
     <Link aria-label={`${cta} ${title}`} href="#">
       {cta}
     </Link>
-  </article>
+  </StyledCard>
 );
 
 export default Card;

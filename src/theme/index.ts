@@ -1,5 +1,7 @@
 interface Palette {
+  darkPurple: string;
   mainPurple: string;
+  lightPurple: string;
   secondaryPurple: string;
   white: string;
   dark: string;
@@ -29,7 +31,9 @@ interface Theme {
 
 const theme: Theme = {
   palette: {
+    darkPurple: "#46119e",
     mainPurple: "#5D16D5",
+    lightPurple: "#b4b1e6",
     secondaryPurple: "#C7D2E9",
     white: "#ffffff",
     dark: "#242424",

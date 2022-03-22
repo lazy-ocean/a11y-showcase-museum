@@ -3,8 +3,7 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
   width: 100%;
   display: flex;
-  padding: ${({ theme }) => `${theme.spacing.m} 0 ${theme.spacing.m}
-    ${theme.spacing.m}`};
+  padding: ${({ theme }) => theme.spacing.m};
 
   ${({ theme }) => `
   @media only screen and ${theme.breakpoints.desktop}{
@@ -31,6 +30,6 @@ export const LoginBtn = styled.button`
 
   ${({ theme }) => `
   @media only screen and ${theme.breakpoints.tablet}{
-    margin-left: ${({ theme }) => theme.spacing.m};
+    margin-left: ${theme.spacing.s};
 `}
 `;
