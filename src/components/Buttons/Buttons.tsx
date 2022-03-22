@@ -2,7 +2,6 @@ import styled, { css } from "styled-components";
 
 interface ButtonProps {
   small?: boolean;
-  emphasized?: boolean;
 }
 
 const Button = css<ButtonProps>`
@@ -15,12 +14,6 @@ const Button = css<ButtonProps>`
   font-size: 1.8rem;
   border-radius: ${({ theme }) => theme.radius};
   border: none;
-
-  ${({ emphasized }) =>
-    emphasized &&
-    `
-    text-decoration: underline;
-  `};
 `;
 
 export const PrimaryButton = styled.button`

@@ -1,38 +1,35 @@
 import React from "react";
-import styled from "styled-components";
 import {
   SecondaryHeading,
   TertiaryHeading,
   RegularText,
   Link,
 } from "../Typography";
+import { StyledCard } from "./Card.styled";
 
 interface CardProps {
   img: string;
   title: string;
   subtitle?: string;
-  description: string;
+  description?: string;
   cta: string;
+  address?: string;
 }
 
-const StyledCard = styled.article`
-  cursor: default;
-  transition: all 0.2s;
-
-  &:hover {
-    a,
-    h2 {
-      color: ${({ theme }) => theme.palette.mainPurple};
-    }
-  }
-`;
-
-const Card = ({ img, title, subtitle, description, cta }: CardProps) => (
+const Card = ({
+  img,
+  title,
+  subtitle,
+  description,
+  cta,
+  address,
+}: CardProps) => (
   <StyledCard>
     <img src={img} alt={title} />
     <SecondaryHeading>{title}</SecondaryHeading>
     <TertiaryHeading>{subtitle}</TertiaryHeading>
-    <RegularText>{description}</RegularText>
+    {address && <RegularText as="address">{address}</RegularText>}
+    {description && <RegularText>{description}</RegularText>}
     <Link aria-label={`${cta} ${title}`} href="#">
       {cta}
     </Link>

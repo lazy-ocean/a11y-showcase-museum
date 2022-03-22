@@ -16,37 +16,37 @@ const Museums = () => {
     richter: {
       img: richterImg.src,
       title: dictionary.museums.richter.title,
-      description: dictionary.museums.richter.description,
+      address: dictionary.museums.richter.description,
       cta: dictionary.museums.cta,
     },
     museion: {
       img: museionImg.src,
       title: dictionary.museums.museion.title,
-      description: dictionary.museums.museion.description,
+      address: dictionary.museums.museion.description,
       cta: dictionary.museums.cta,
     },
     lopuchiny: {
       img: lopuchinyImg.src,
       title: dictionary.museums.lopuchiny.title,
-      description: dictionary.museums.lopuchiny.description,
+      address: dictionary.museums.lopuchiny.description,
       cta: dictionary.museums.cta,
     },
     learning: {
       img: learningImg.src,
       title: dictionary.museums.learning.title,
-      description: dictionary.museums.learning.description,
+      address: dictionary.museums.learning.description,
       cta: dictionary.museums.cta,
     },
     privates: {
       img: privateImg.src,
       title: dictionary.museums.privates.title,
-      description: dictionary.museums.privates.description,
+      address: dictionary.museums.privates.description,
       cta: dictionary.museums.cta,
     },
     gallery: {
       img: galleryImg.src,
       title: dictionary.museums.gallery.title,
-      description: dictionary.museums.gallery.description,
+      address: dictionary.museums.gallery.description,
       cta: dictionary.museums.cta,
     },
   };

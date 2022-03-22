@@ -110,7 +110,7 @@ export interface Dictionary {
   gallery: Gallery;
   ctas: CTAS;
   expositions: Expositions;
-  museums?: Museums;
+  museums: Museums;
   footer: Footer;
   meta?: Meta;
 }
