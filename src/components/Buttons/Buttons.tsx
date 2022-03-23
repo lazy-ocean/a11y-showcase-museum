@@ -5,7 +5,7 @@ interface ButtonProps {
 }
 
 const Button = css<ButtonProps>`
-  padding: ${({ small }) => (small ? "1.4rem 1.8rem" : "1.8rem 4rem")};
+  padding: ${({ small }) => (small ? "1rem 1.5rem" : "1rem 1.5rem")};
   text-align: center;
   font-stretch: normal;
   font-style: normal;
@@ -14,6 +14,11 @@ const Button = css<ButtonProps>`
   font-size: 1.8rem;
   border-radius: ${({ theme }) => theme.radius};
   border: none;
+
+  ${({ theme, small }) => `
+  @media only screen and ${theme.breakpoints.mobile}{
+    padding: ${small ? "1.4rem 1.8rem" : "1.8rem 4rem"};
+`}}
 `;
 
 export const PrimaryButton = styled.button`

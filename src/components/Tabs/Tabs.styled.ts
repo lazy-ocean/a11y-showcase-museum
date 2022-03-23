@@ -2,7 +2,12 @@ import styled from "styled-components";
 import { SecondaryHeading } from "../Typography";
 
 export const TabsSection = styled.section`
-  margin-top: ${({ theme }) => theme.spacing.xxl};
+  margin-top: ${({ theme }) => theme.spacing.xl};
+
+  ${({ theme }) => `
+  @media only screen and ${theme.breakpoints.mobile}{
+    margin-top: ${theme.spacing.xxl};
+  }`}
 `;
 
 export const TabsButtons = styled.div`
@@ -16,16 +21,14 @@ interface TabsContentProps {
 export const TabsContent = styled.div<TabsContentProps>`
   display: grid;
   grid-template-columns: ${({ oneColumn }) =>
-    oneColumn ? "1fr" : "1fr 1fr 1fr"};
+    oneColumn ? "1fr" : "repeat(auto-fit, minmax(300px, 1fr))"};
   gap: ${({ theme }) => theme.spacing.m};
-  grid-template-areas: "history history history";
 
   ${SecondaryHeading} {
     margin: 2rem 0;
   }
 
   .history {
-    grid-area: history;
     font-size: 2.2rem;
     margin: 0;
   }

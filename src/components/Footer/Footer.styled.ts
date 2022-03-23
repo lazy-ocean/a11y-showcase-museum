@@ -2,18 +2,24 @@ import styled from "styled-components";
 import { PrimaryButton } from "../Buttons/Buttons";
 
 export const StyledFooter = styled.footer`
-  margin-top: ${({ theme }) => theme.spacing.xxl};
+  margin-top: ${({ theme }) => theme.spacing.xl};
   background-color: ${({ theme }) => theme.palette.grey};
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   padding: ${({ theme }) => theme.spacing.m};
-
-  gap: 8rem;
+  gap: ${({ theme }) => theme.spacing.m};
 
   ${({ theme }) => `
+  @media only screen and ${theme.breakpoints.tablet}{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+    margin-top: ${theme.spacing.xxl};
+  }
+
   @media only screen and ${theme.breakpoints.desktop}{
     padding: 7rem 20rem;
-`}
+  }`}
 `;
 
 export const FooterMenu = styled.menu`
@@ -41,13 +47,19 @@ export const SocialMedia = styled.ul`
   gap: ${({ theme }) => theme.spacing.s};
 
   svg {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     transition: all 0.2s;
 
     &:hover {
       fill: ${({ theme }) => theme.palette.mainPurple};
     }
+
+    ${({ theme }) => `
+      @media only screen and ${theme.breakpoints.mobile}{
+        width: 40px;
+        height: 40px;
+      }`}
   }
 `;
 

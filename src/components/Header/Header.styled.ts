@@ -8,7 +8,7 @@ export const StyledHeader = styled.header`
   ${({ theme }) => `
   @media only screen and ${theme.breakpoints.desktop}{
     padding: 4rem 20rem 0 20rem;
-`}
+  }`}
 `;
 
 export const Logo = styled.img`
@@ -31,5 +31,5 @@ export const LoginBtn = styled.button`
   ${({ theme }) => `
   @media only screen and ${theme.breakpoints.tablet}{
     margin-left: ${theme.spacing.s};
-`}
+  }`}
 `;

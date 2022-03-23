@@ -6,5 +6,5 @@ export const MainStyled = styled.main`
   ${({ theme }) => `
 @media only screen and ${theme.breakpoints.desktop}{
   padding: 0 20rem;
-`}
+}`}
 `;

@@ -4,19 +4,18 @@ export const MainMenu = styled.menu`
   display: flex;
   gap: 4rem;
   padding: 0 ${({ theme }) => theme.spacing.m};
-  margin: 4rem 0;
+  margin: 0 0 ${({ theme }) => theme.spacing.m} 0;
   flex-wrap: wrap;
   list-style-type: none;
 
   ${({ theme }) => `
-    @media only screen and ${theme.breakpoints.tablet}{
+    @media only screen and ${theme.breakpoints.tablet} {
       margin: 7.6rem 0 ${theme.spacing.m} 0;
-  `}
+    }
 
-  ${({ theme }) => `
-  @media only screen and ${theme.breakpoints.desktop}{
-    padding: 0 20rem;
-`}
+    @media only screen and ${theme.breakpoints.desktop} {
+      padding: 0 20rem;
+    }`}
 `;
 
 export const MenuItem = styled.li`

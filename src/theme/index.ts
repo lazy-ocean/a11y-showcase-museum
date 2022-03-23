@@ -19,6 +19,7 @@ interface Spacings {
   xs: string;
   s: string;
   m: string;
+  xl: string;
   xxl: string;
 }
 
@@ -49,6 +50,7 @@ const theme: Theme = {
     xs: "1rem",
     s: "2rem",
     m: "4rem",
+    xl: "8rem",
     xxl: "12rem",
   },
   radius: "8px",

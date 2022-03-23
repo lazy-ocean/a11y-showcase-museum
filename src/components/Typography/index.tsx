@@ -6,17 +6,22 @@ const headingCommon = () => css`
 `;
 
 export const PrimaryHeading = styled.h1`
-  ${headingCommon}
-  font-size: 5rem;
+  ${headingCommon};
+  font-size: 3.5rem;
+
+  ${({ theme }) => `
+  @media only screen and ${theme.breakpoints.mobile}{
+    font-size: 5rem;
+  }`};
 `;
 
 export const SecondaryHeading = styled.h2`
-  ${headingCommon}
+  ${headingCommon};
   font-size: 2.6rem;
 `;
 
 export const TertiaryHeading = styled.h3`
-  ${headingCommon}
+  ${headingCommon};
   font-size: 2.2rem;
 `;
 
