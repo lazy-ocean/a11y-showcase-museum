@@ -51,7 +51,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       <div>
-        <FooterMenu>
+        <FooterMenu aria-label={dictionary.footer.menu}>
           {footerMenuItems.map(({ link, label }: FooterMenuItem, i) => (
             <li key={`footer-menu-${i}`}>
               <FooterMenuLink href={link} aria-label={label}>

@@ -27,7 +27,7 @@ const Card = ({
   <StyledCard>
     <img src={img} alt={title} />
     <SecondaryHeading>{title}</SecondaryHeading>
-    <TertiaryHeading>{subtitle}</TertiaryHeading>
+    {subtitle && <TertiaryHeading>{subtitle}</TertiaryHeading>}
     {address && <RegularText as="address">{address}</RegularText>}
     {description && <RegularText>{description}</RegularText>}
     <Link aria-label={`${cta} ${title}`} href="#">

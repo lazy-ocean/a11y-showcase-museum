@@ -92,6 +92,7 @@ interface Footer {
   subscribe: string;
   gdpr: string;
   social: string;
+  menu: string;
 }
 
 interface Meta {

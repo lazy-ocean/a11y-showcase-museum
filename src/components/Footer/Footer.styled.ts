@@ -16,13 +16,14 @@ export const StyledFooter = styled.footer`
 `}
 `;
 
-export const FooterMenu = styled.nav`
+export const FooterMenu = styled.menu`
   list-style-type: none;
   font-size: 1.8rem;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.s};
   margin-bottom: ${({ theme }) => theme.spacing.m};
+  padding-left: 0;
 `;
 
 export const FooterMenuLink = styled.a`

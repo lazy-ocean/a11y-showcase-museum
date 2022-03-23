@@ -39,7 +39,6 @@ const SubscriptionForm = () => {
               required
               aria-required={true}
               aria-label={dictionary.footer.gdpr}
-              aria-checked="false"
             />
             <RegularText as="label" htmlFor="gdpr">
               {dictionary.footer.gdpr}

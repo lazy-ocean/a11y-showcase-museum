@@ -7,8 +7,11 @@ import { CallToActionsMenu } from "./CTAPanel.styled";
 const CTAPanel = () => {
   const { dictionary } = useContext(LanguageContext);
   return (
-    <section>
-      <CallToActionsMenu aria-label={dictionary.menus.buttonsMenu}>
+    <section aria-labelledby="cta-header">
+      <h1 id="cta-header" className="visually-hidden" aria-hidden="true">
+        {dictionary.menus.buttonsMenu}
+      </h1>
+      <CallToActionsMenu aria-labelledby="cta-header">
         <PrimaryButton aria-label={dictionary.ctas.buy}>
           {dictionary.ctas.buy}
         </PrimaryButton>
