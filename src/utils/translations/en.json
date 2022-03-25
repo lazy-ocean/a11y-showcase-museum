@@ -2,6 +2,7 @@
   "logo": "The Pushkin State Museum of Fine Arts",
   "search": "Search something",
   "searchSubmit": "Submit",
+  "skipToMain": "Skip to main",
   "buttons": {
     "loginButton": "Login",
     "langButtonRu": "Switch to Russian version",

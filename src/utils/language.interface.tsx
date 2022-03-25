@@ -114,6 +114,7 @@ export interface Dictionary {
   museums: Museums;
   footer: Footer;
   meta?: Meta;
+  skipToMain: string;
 }
 
 export interface Dictionaries {

@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import logo from "../../../public/logo.svg";
 import { LanguageContext } from "../../utils/LanguageContext";
 import SearchPanel from "../SearchPanel";
-import { StyledHeader, Logo, LoginBtn } from "./Header.styled";
+import { StyledHeader, Logo, LoginBtn, SkipToMain } from "./Header.styled";
 import LanguageSwitcher from "../LanguageSwitcher";
 import { RiUserLine } from "react-icons/ri";
 import LoginModal from "../LoginModal";
@@ -15,6 +15,9 @@ const Header = () => {
   return (
     <StyledHeader>
       <Logo src={logo.src} alt={dictionary.logo} />
+      <SkipToMain href="#main" aria-label={dictionary.skipToMain}>
+        {dictionary.skipToMain}
+      </SkipToMain>
       {isDesktop && <SearchPanel />}
       <LanguageSwitcher />
       <LoginBtn

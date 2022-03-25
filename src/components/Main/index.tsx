@@ -8,7 +8,7 @@ import { MainStyled } from "./Main.styled";
 
 const Main = () => {
   return (
-    <MainStyled>
+    <MainStyled id="main">
       <Gallery />
       <CTAPanel />
       <Expositions />

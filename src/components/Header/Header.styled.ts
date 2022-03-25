@@ -4,6 +4,7 @@ export const StyledHeader = styled.header`
   width: 100%;
   display: flex;
   padding: ${({ theme }) => theme.spacing.m};
+  align-items: center;
 
   ${({ theme }) => `
   @media only screen and ${theme.breakpoints.desktop}{
@@ -32,4 +33,20 @@ export const LoginBtn = styled.button`
   @media only screen and ${theme.breakpoints.tablet}{
     margin-left: ${theme.spacing.s};
   }`}
+`;
+
+export const SkipToMain = styled.a`
+  font-size: 1.7rem;
+  padding: 1rem;
+  position: absolute;
+  transform: translateY(-200%);
+  transition: all 0.2s;
+  display: block;
+  overflow: hidden;
+  background-color: white;
+  left: 40%;
+
+  &:focus {
+    transform: translateY(0%);
+  }
 `;
