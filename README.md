@@ -1,12 +1,12 @@
-This is a [Next.js](https://nextjs.org/) boilerplate to create SPA-s without breaking a sweat. 🥵
+This is an a11y playground/showcase sample website made during **[Accessibility Unity](https://accessibilityunity.com/)** learning course.
+Tested with Mac Voice Over, keyboard-friendly, tackles frontend + accessibility challenges such as modals, forms, tabs, sliders, language switching.
 
 ## Stack and tools
 
 - **[Next.js](https://nextjs.org/)** with **TypeScript** integration: React web framework
-- **[Jest](https://jestjs.io/)** + **[React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)**: unit and React components testing
-- **[Prettier](https://prettier.io/docs/en/index.html)** + **[eslint](https://eslint.org/)**: coding in style
+- **[Prettier](https://prettier.io/docs/en/index.html)** + **[eslint](https://eslint.org/)**: formatting
 - **[Husky](https://github.com/typicode/husky)** + **[commitlint](https://github.com/conventional-changelog/commitlint)**: auto-linting commits with Husky for meeting the [conventional commit format](https://www.conventionalcommits.org/en/v1.0.0/)
-- **[styled-components](https://styled-components.com/)**: styling your app.
+- **[styled-components](https://styled-components.com/)**: styling.
 
 ## Run locally
 
@@ -20,15 +20,7 @@ $ npm install
 $ yarn
 ```
 
-4. Initialize Husky
-
-```
-$ npm run prepare
-# or
-$ yarn husky install
-```
-
-5. Run the deployment server
+3. Run the deployment server
 
 ```
 $ npm run dev
@@ -36,4 +28,4 @@ $ npm run dev
 $ yarn dev
 ```
 
-6. Your app is served at http://localhost:3000/
+4. Your app is served at http://localhost:3000/
