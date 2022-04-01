@@ -39,8 +39,8 @@ export const SkipToMain = styled.a`
   font-size: 1.7rem;
   padding: 1rem;
   position: absolute;
-  transform: translateY(-200%);
-  transition: all 0.2s;
+  transform: translateY(-300%);
+  transition: transform 0.2s;
   display: block;
   overflow: hidden;
   background-color: white;

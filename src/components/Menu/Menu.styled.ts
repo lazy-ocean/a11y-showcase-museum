@@ -20,7 +20,7 @@ export const MainMenu = styled.menu`
 
 export const MenuItem = styled.li`
   font-size: 1.8rem;
-  transition: all 0.4s;
+  transition: border-bottom 0.4s;
 
   a {
     padding-bottom: 5px;

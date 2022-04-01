@@ -33,10 +33,11 @@ export const FooterMenu = styled.menu`
 `;
 
 export const FooterMenuLink = styled.a`
-  transition: all 0.2s;
+  transition: border-bottom 0.2s;
+  border-bottom: 2px dashed transparent;
 
   &:hover {
-    border-bottom: 2.5px dashed ${({ theme }) => theme.palette.mainPurple};
+    border-bottom: 2px dashed ${({ theme }) => theme.palette.mainPurple};
   }
 `;
 
@@ -49,7 +50,7 @@ export const SocialMedia = styled.ul`
   svg {
     width: 30px;
     height: 30px;
-    transition: all 0.2s;
+    transition: fill 0.2s;
 
     &:hover {
       fill: ${({ theme }) => theme.palette.mainPurple};

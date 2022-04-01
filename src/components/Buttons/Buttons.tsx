@@ -9,7 +9,7 @@ const Button = css<ButtonProps>`
   text-align: center;
   font-stretch: normal;
   font-style: normal;
-  transition: all 0.4s ease-out;
+  transition: background-color 0.4s ease-out;
   cursor: pointer;
   font-size: 1.8rem;
   border-radius: ${({ theme }) => theme.radius};
