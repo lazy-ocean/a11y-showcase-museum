@@ -1,22 +1,23 @@
 import React, { useContext } from "react";
 import { LanguageContext } from "../../utils/LanguageContext";
 import { MainMenu, MenuItem } from "./Menu.styled";
+import { Link } from "../Typography";
 
 const Menu = () => {
   const { dictionary } = useContext(LanguageContext);
   return (
     <MainMenu aria-label={dictionary.menus.mainMenu}>
       <MenuItem>
-        <a href="#">{dictionary.sections.museum}</a>
+        <Link href="#">{dictionary.sections.museum}</Link>
       </MenuItem>
       <MenuItem>
-        <a href="#">{dictionary.sections.visit}</a>
+        <Link href="#">{dictionary.sections.visit}</Link>
       </MenuItem>
       <MenuItem>
-        <a href="#">{dictionary.sections.expositions}</a>
+        <Link href="#">{dictionary.sections.expositions}</Link>
       </MenuItem>
       <MenuItem>
-        <a href="#">{dictionary.sections.broadcasts}</a>
+        <Link href="#">{dictionary.sections.broadcasts}</Link>
       </MenuItem>
     </MainMenu>
   );

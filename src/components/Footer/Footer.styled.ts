@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { PrimaryButton } from "../Buttons/Buttons";
 
 export const StyledFooter = styled.footer`
-  margin-top: ${({ theme }) => theme.spacing.xl};
+  margin-top: ${({ theme }) => theme.spacing.l};
   background-color: ${({ theme }) => theme.palette.grey};
   display: flex;
   flex-direction: column;
@@ -13,27 +13,28 @@ export const StyledFooter = styled.footer`
   @media only screen and ${theme.breakpoints.tablet}{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 8rem;
+    gap: ${theme.spacing.l};
     margin-top: ${theme.spacing.xxl};
   }
 
   @media only screen and ${theme.breakpoints.desktop}{
-    padding: 7rem 20rem;
+    padding: ${theme.spacing.l} ${theme.spacing.xxl};
   }`}
 `;
 
 export const FooterMenu = styled.menu`
   list-style-type: none;
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacing.s};
-  margin-bottom: ${({ theme }) => theme.spacing.m};
+  margin: 0 0 ${({ theme }) => theme.spacing.m};
   padding-left: 0;
 `;
 
 export const FooterMenuLink = styled.a`
   transition: border-bottom 0.2s;
+  text-decoration: none;
   border-bottom: 2px dashed transparent;
 
   &:hover {
@@ -43,9 +44,10 @@ export const FooterMenuLink = styled.a`
 
 export const SocialMedia = styled.ul`
   display: flex;
-  margin-top: ${({ theme }) => theme.spacing.xs};
+  margin-top: ${({ theme }) => theme.spacing.s};
   padding: 0;
   gap: ${({ theme }) => theme.spacing.s};
+  list-style-type: none;
 
   svg {
     width: 30px;
@@ -71,7 +73,7 @@ export const SubscribeInput = styled.input`
   padding: ${({ theme }) => theme.spacing.xs} 0;
   margin: ${({ theme }) => theme.spacing.xs};
   margin-left: 0;
-  font-size: 1.8rem;
+  font-size: 1rem;
   flex-grow: 1;
 `;
 

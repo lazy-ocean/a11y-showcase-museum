@@ -8,25 +8,29 @@ export const StyledHeader = styled.header`
 
   ${({ theme }) => `
   @media only screen and ${theme.breakpoints.desktop}{
-    padding: 4rem 20rem 0 20rem;
+    padding: ${theme.spacing.l} ${theme.spacing.xxl} 0 ${theme.spacing.xxl};
   }`}
 `;
 
 export const Logo = styled.img`
-  height: 4.2rem;
-  margin-right: auto;
+  height: 2rem;
+
+  ${({ theme }) => `
+  @media only screen and ${theme.breakpoints.tablet}{
+    height: 4.2rem;
+  }`}
 `;
 
 export const LoginBtn = styled.button`
   border: none;
   background-color: transparent;
   display: flex;
-  margin-left: 1rem;
+  margin-left: ${({ theme }) => theme.spacing.s};
   cursor: pointer;
 
   svg {
-    width: 4.6rem;
-    height: 4.6rem;
+    width: 3rem;
+    height: 3rem;
   }
 
   ${({ theme }) => `
@@ -36,17 +40,17 @@ export const LoginBtn = styled.button`
 `;
 
 export const SkipToMain = styled.a`
-  font-size: 1.7rem;
-  padding: 1rem;
+  padding: ${({ theme }) => theme.spacing.s};
   position: absolute;
   transform: translateY(-300%);
-  transition: transform 0.2s;
   display: block;
   overflow: hidden;
   background-color: white;
   left: 40%;
+  z-index: 10;
 
   &:focus {
+    transition: transform 0.2s;
     transform: translateY(0%);
   }
 `;

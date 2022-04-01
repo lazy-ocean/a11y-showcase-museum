@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { SecondaryHeading } from "../Typography";
 
 export const TabsSection = styled.section`
-  margin-top: ${({ theme }) => theme.spacing.xl};
+  margin-top: ${({ theme }) => theme.spacing.l};
 
   ${({ theme }) => `
   @media only screen and ${theme.breakpoints.mobile}{
-    margin-top: ${theme.spacing.xxl};
+    margin-top: ${theme.spacing.xl};
   }`}
 `;
 
@@ -25,17 +25,18 @@ export const TabsContent = styled.div<TabsContentProps>`
   gap: ${({ theme }) => theme.spacing.m};
 
   ${SecondaryHeading} {
-    margin: 2rem 0;
+    margin: ${({ theme }) => theme.spacing.s} 0;
   }
 
   .history {
-    font-size: 2.2rem;
+    line-height: 2rem;
     margin: 0;
   }
 
   img {
-    height: 15rem;
+    height: 14rem;
     width: 100%;
     object-fit: cover;
+    object-position: top;
   }
 `;

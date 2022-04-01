@@ -5,19 +5,19 @@ interface ButtonProps {
 }
 
 const Button = css<ButtonProps>`
-  padding: ${({ small }) => (small ? "1rem 1.5rem" : "1rem 1.5rem")};
+  padding: ${({ theme }) => theme.spacing.s};
   text-align: center;
-  font-stretch: normal;
-  font-style: normal;
-  transition: background-color 0.4s ease-out;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 0.8rem;
   border-radius: ${({ theme }) => theme.radius};
   border: none;
 
   ${({ theme, small }) => `
   @media only screen and ${theme.breakpoints.mobile}{
-    padding: ${small ? "1.4rem 1.8rem" : "1.8rem 4rem"};
+    padding: ${
+      small ? theme.spacing.s : `${theme.spacing.s} ${theme.spacing.m}`
+    };
+    font-size: 1rem;
 `}}
 `;
 
@@ -29,6 +29,7 @@ export const PrimaryButton = styled.button`
     color: ${theme.palette.white};
 
     &:hover {
+      transition: background-color 0.4s ease-out;
       background-color: ${theme.palette.darkPurple};
     }
   `};
@@ -42,6 +43,7 @@ export const SecondaryButton = styled.button`
     color: ${theme.palette.dark};
 
     &:hover {
+      transition: background-color 0.4s ease-out;
       background-color: ${theme.palette.lightPurple};
     }
   `};
@@ -50,10 +52,6 @@ export const SecondaryButton = styled.button`
 export const GhostButton = styled.button`
   ${Button};
   text-decoration: underline;
-
-  &:hover {
-    text-decoration-style: dashed;
-  }
 
   ${({ theme }) => `
     background-color: transparent;

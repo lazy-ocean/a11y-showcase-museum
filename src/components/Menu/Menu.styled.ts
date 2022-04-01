@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainMenu = styled.menu`
   display: flex;
-  gap: 4rem;
+  gap: ${({ theme }) => theme.spacing.m};
   padding: 0 ${({ theme }) => theme.spacing.m};
   margin: 0 0 ${({ theme }) => theme.spacing.m} 0;
   flex-wrap: wrap;
@@ -10,20 +10,20 @@ export const MainMenu = styled.menu`
 
   ${({ theme }) => `
     @media only screen and ${theme.breakpoints.tablet} {
-      margin: 7.6rem 0 ${theme.spacing.m} 0;
+      margin: ${theme.spacing.l} 0 ${theme.spacing.m} 0;
     }
 
     @media only screen and ${theme.breakpoints.desktop} {
-      padding: 0 20rem;
+      padding: 0 ${theme.spacing.xxl};
     }`}
 `;
 
 export const MenuItem = styled.li`
-  font-size: 1.8rem;
   transition: border-bottom 0.4s;
 
   a {
     padding-bottom: 5px;
+    text-decoration: none;
     border-bottom: 2px solid ${({ theme }) => theme.palette.mainPurple};
 
     &:hover {

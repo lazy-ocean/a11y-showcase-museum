@@ -19,6 +19,7 @@ interface Spacings {
   xs: string;
   s: string;
   m: string;
+  l: string;
   xl: string;
   xxl: string;
 }
@@ -47,11 +48,12 @@ const theme: Theme = {
     desktop: `(min-width: 1200px)`,
   },
   spacing: {
-    xs: "1rem",
-    s: "2rem",
-    m: "4rem",
-    xl: "8rem",
-    xxl: "12rem",
+    xs: "0.5rem",
+    s: "1rem",
+    m: "2rem",
+    l: "4rem",
+    xl: "6rem",
+    xxl: "10rem",
   },
   radius: "8px",
 };
