@@ -24,6 +24,13 @@ export const TabsContent = styled.div<TabsContentProps>`
     oneColumn ? "1fr" : "repeat(auto-fit, minmax(300px, 1fr))"};
   gap: ${({ theme }) => theme.spacing.m};
 
+  ${({ theme, oneColumn }) => `
+  @media only screen and ${theme.breakpoints.desktop}{
+    grid-template-columns: ${
+      oneColumn ? "1fr" : "repeat(3, minmax(300px, 1fr))"
+    };
+  }`}
+
   ${SecondaryHeading} {
     margin: ${({ theme }) => theme.spacing.s} 0;
   }

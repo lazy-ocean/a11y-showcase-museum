@@ -14,7 +14,7 @@ export const StyledFooter = styled.footer`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: ${theme.spacing.l};
-    margin-top: ${theme.spacing.xxl};
+    margin-top: ${theme.spacing.xl};
   }
 
   @media only screen and ${theme.breakpoints.desktop}{
