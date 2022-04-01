@@ -15,6 +15,8 @@ import { Languages } from "../utils/language.interface";
 const MyApp = () => {
   const { locale } = useRouter();
 
+  const customStyle = "#gallery {display:none;}";
+
   return (
     <>
       <Head>
@@ -32,6 +34,9 @@ const MyApp = () => {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <noscript>
+          <style>{customStyle}</style>
+        </noscript>
       </Head>
       <ThemeProvider theme={theme}>
         <LanguageProvider>
