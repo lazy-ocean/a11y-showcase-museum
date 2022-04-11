@@ -53,7 +53,7 @@ const theme: Theme = {
     m: "2rem",
     l: "4rem",
     xl: "6rem",
-    xxl: "15rem",
+    xxl: "8rem",
   },
   radius: "8px",
 };

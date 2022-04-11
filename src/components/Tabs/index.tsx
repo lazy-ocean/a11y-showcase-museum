@@ -3,6 +3,7 @@ import { LanguageContext } from "../../utils/LanguageContext";
 import { PrimaryHeading } from "../Typography";
 import { SecondaryButton, GhostButton } from "../Buttons/Buttons";
 import { TabsSection, TabsButtons, TabsContent } from "./Tabs.styled";
+import { useEffect } from "react";
 
 export interface TabsButton {
   id: number;
@@ -17,9 +18,10 @@ interface TabsProps {
   title: string;
   buttons: TabsButton[];
   content: TabsContent[];
+  id: string;
 }
 
-const Tabs = ({ title, buttons, content }: TabsProps) => {
+const Tabs = ({ title, buttons, content, id }: TabsProps) => {
   const [activeTab, setActiveTab] = useState(buttons[0].id);
   const { dictionary } = useContext(LanguageContext);
   const activeContent = useMemo(
@@ -27,33 +29,43 @@ const Tabs = ({ title, buttons, content }: TabsProps) => {
     [activeTab, content]
   );
 
+  useEffect(() => {
+    const el = document.querySelector<HTMLElement>(`#${id}_tab_${activeTab}`);
+    el?.focus();
+  }, [activeTab]);
+
   return (
     <TabsSection>
       <PrimaryHeading>{title}</PrimaryHeading>
-      <TabsButtons>
-        {buttons.map((b: TabsButton) =>
-          b.id === activeTab ? (
-            <SecondaryButton
-              aria-label={`${dictionary.expositions.show} ${b.title}`}
-              key={b.id}
-              onClick={() => setActiveTab(b.id)}
-            >
+      <TabsButtons role="tablist" aria-label={title}>
+        {buttons.map((b: TabsButton) => {
+          const common = {
+            role: "tab",
+            ariaLabel: `${dictionary.expositions.show} ${b.title}`,
+            key: b.id,
+            onClick: () => setActiveTab(b.id),
+            id: `${id}_tab_${b.id}`,
+            ariaControls: `${id}_tab_panel_${b.id}`,
+            href: `#${id}_tab_panel_${b.id}`,
+          };
+          return b.id === activeTab ? (
+            <SecondaryButton {...common} aria-selected="true">
               {b.title}
             </SecondaryButton>
           ) : (
-            <GhostButton
-              aria-label={`${dictionary.expositions.show} ${b.title}`}
-              key={b.id}
-              onClick={() => setActiveTab(b.id)}
-            >
+            <GhostButton {...common} aria-selected="false">
               {b.title}
             </GhostButton>
-          )
-        )}
+          );
+        })}
       </TabsButtons>
-      <TabsContent>
+      <TabsContent
+        id={`${id}_tab_panel_${activeTab}`}
+        aria-labelledby={`${id}_tab_${activeTab}`}
+        oneColumn={activeContent.length === 1}
+      >
         {activeContent.map((c, i) => (
-          <React.Fragment key={i}>{c.content}</React.Fragment>
+          <React.Fragment key={`tab-${i}`}>{c.content}</React.Fragment>
         ))}
       </TabsContent>
     </TabsSection>

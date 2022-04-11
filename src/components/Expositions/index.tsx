@@ -49,6 +49,7 @@ const Expositions = () => {
       title={dictionary.sections.expositions}
       buttons={buttons}
       content={content}
+      id="expo"
     />
   );
 };

@@ -24,9 +24,9 @@ const Card = ({
   cta,
   address,
 }: CardProps) => (
-  <StyledCard>
+  <StyledCard tabIndex={0} aria-label={title} role="tabpanel">
     <img src={img} alt={title} />
-    <SecondaryHeading>{title}</SecondaryHeading>
+    <SecondaryHeading id="id">{title}</SecondaryHeading>
     {subtitle && <TertiaryHeading>{subtitle}</TertiaryHeading>}
     {address && <RegularText as="address">{address}</RegularText>}
     {description && <RegularText>{description}</RegularText>}

@@ -54,6 +54,7 @@ const Museums = () => {
     <>
       <RegularText
         className="history"
+        tabIndex={0}
         dangerouslySetInnerHTML={{ __html: dictionary.museums.historyText }}
       />
     </>
@@ -78,6 +79,7 @@ const Museums = () => {
       title={dictionary.sections.expositions}
       buttons={buttons}
       content={content}
+      id="msms"
     />
   );
 };
