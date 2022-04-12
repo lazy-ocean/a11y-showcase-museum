@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { PrimaryButton } from "../Buttons/Buttons";
 import { LanguageContext } from "../../utils/LanguageContext";
 import { CallToActionsMenu } from "./CTAPanel.styled";

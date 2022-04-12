@@ -42,6 +42,9 @@ interface Gallery {
   next: string;
   current: string;
   gallery: string;
+  fridays: string;
+  mummies: string;
+  egypt: string;
 }
 
 interface CTAS {

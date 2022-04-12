@@ -35,7 +35,10 @@
     "prev": "Previous slide",
     "next": "Next slide",
     "current": "Current slide",
-    "gallery": "Events gallery"
+    "gallery": "Events gallery",
+    "fridays": "Fridays in Museum, weekly events from January to April",
+    "mummies": "Mummies of Ancient Egypt, exhibition in the Main Building, from March 1 to May 31",
+    "egypt": "Flight to Egypt, exhibition in the Main Building, from March 1 to May 31"
   },
   "ctas": {
     "buy": "Buy a ticket online",

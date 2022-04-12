@@ -1,40 +1,68 @@
 import React, { useContext } from "react";
-import { Carousel } from "react-responsive-carousel";
+import Carousel from "nuka-carousel";
+import { Slide, SlideButton } from "./Gallery.styled";
 import { LanguageContext } from "../../utils/LanguageContext";
+import { GrNext, GrPrevious } from "react-icons/gr";
 import heroBanner1 from "../../../public/hero-banner1.jpeg";
 import heroBanner2 from "../../../public/hero-banner2.jpeg";
 import heroBanner3 from "../../../public/hero-banner3.jpeg";
 
+interface SlideInterface {
+  alt: string;
+  src: string;
+}
+
 const Gallery = () => {
   const { dictionary } = useContext(LanguageContext);
+
+  const slides: SlideInterface[] = [
+    {
+      alt: dictionary.gallery.fridays,
+      src: heroBanner1.src,
+    },
+    {
+      alt: dictionary.gallery.mummies,
+      src: heroBanner2.src,
+    },
+    {
+      alt: dictionary.gallery.egypt,
+      src: heroBanner3.src,
+    },
+  ];
   return (
     <section id="gallery">
       <h1 className="visually-hidden">{dictionary.gallery.title}</h1>
       <Carousel
-        showArrows
-        showStatus={false}
-        showThumbs={false}
-        showIndicators={false}
-        infiniteLoop
-        ariaLabel={dictionary.gallery.gallery}
-        labels={{
-          leftArrow: dictionary.gallery.prev,
-          rightArrow: dictionary.gallery.next,
-          item: dictionary.gallery.current,
+        enableKeyboardControls
+        renderAnnounceSlideMessage={({ currentSlide }) =>
+          `${slides[currentSlide].alt}`
+        }
+        defaultControlsConfig={{
+          nextButtonText: dictionary.gallery.next,
+          prevButtonText: dictionary.gallery.prev,
         }}
+        // @ts-ignore: recent update nuka-carousel issue
+        frameAriaLabel={dictionary.gallery.title}
+        wrapAround
+        aria-label={dictionary.gallery.title}
+        renderCenterLeftControls={({ previousSlide }) => (
+          <SlideButton
+            onClick={previousSlide}
+            aria-label={dictionary.gallery.prev}
+          >
+            <GrPrevious />
+          </SlideButton>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <SlideButton onClick={nextSlide} aria-label={dictionary.gallery.next}>
+            <GrNext />
+          </SlideButton>
+        )}
+        renderBottomCenterControls={() => null}
       >
-        <img
-          alt="Пятницы в Пушкинском, серия мероприятий с января по апрель"
-          src={heroBanner1.src}
-        />
-        <img
-          alt="Мумии Древнего Египта, экспозиция в Главном здании Музея, с 1 марта по 31 мая"
-          src={heroBanner2.src}
-        />
-        <img
-          alt="Бегство в Египет, экспозиция в Главном здании Музея, с 1 марта по 31 мая"
-          src={heroBanner3.src}
-        />
+        {slides.map(({ alt, src }: SlideInterface, i: number) => (
+          <Slide alt={alt} src={src} key={i} />
+        ))}
       </Carousel>
     </section>
   );
