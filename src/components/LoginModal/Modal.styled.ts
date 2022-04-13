@@ -2,16 +2,31 @@ import styled from "styled-components";
 import { SecondaryButton } from "../Buttons/Buttons";
 import { PrimaryHeading } from "../Typography";
 
-export const ModalStyles = {
+export const ModalStylesDesktop = {
   content: {
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    width: "fit-content",
-    padding: "8rem 12rem",
+    padding: "3rem",
     height: "max-content",
     borderRadius: "8px",
-    maxWidth: "80rem",
+    width: "60%",
+  },
+  overlay: {
+    backgroundColor: "#0000006E",
+    zIndex: 100,
+  },
+};
+
+export const ModalStylesMobile = {
+  content: {
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    padding: "2.5rem",
+    height: "max-content",
+    borderRadius: "8px",
+    width: "85%",
   },
   overlay: {
     backgroundColor: "#0000006E",
@@ -26,23 +41,22 @@ export const LoginField = styled.div`
 `;
 
 export const LoginLabel = styled.label`
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `;
 
 export const LoginInput = styled.input`
-  width: 50rem;
-  height: 6.5rem;
-  border-radius: border-radius: ${({ theme }) => theme.radius};
+  width: 100%;
+  border-radius: ${({ theme }) => theme.radius};
   border: 1px solid #c7d2e9;
   padding: ${({ theme }) => theme.spacing.s};
-  font-size: 3rem;
+  font-size: 1rem;
   background-color: ${({ theme }) => theme.palette.lightBG};
 `;
 
 export const ErrorMessage = styled.span`
   margin-top: ${({ theme }) => theme.spacing.xs};
-  font-size: 1.6rem;
+  font-size: 1rem;
 `;
 
 export const LoginButton = styled(SecondaryButton)`
@@ -63,5 +77,5 @@ export const CloseBtn = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 2rem;
 `;

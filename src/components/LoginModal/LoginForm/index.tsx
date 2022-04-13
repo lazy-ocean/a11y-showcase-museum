@@ -43,8 +43,8 @@ const LoginForm = () => {
     e.preventDefault();
 
     const { email, password } = document.forms[1];
-    console.log(document.forms[1]);
-    const userData = database.find((user) => user.email === email.value);
+
+    const userData = database.find((user) => user.email === email?.value);
 
     if (userData) {
       if (userData.password !== password.value) {

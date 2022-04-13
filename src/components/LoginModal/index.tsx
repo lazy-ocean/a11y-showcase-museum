@@ -1,8 +1,15 @@
-import React, { Dispatch, useContext, useState } from "react";
+import React, { Dispatch, useContext } from "react";
 import { LanguageContext } from "../../utils/LanguageContext";
 import Modal from "react-modal";
-import { ModalStyles, Heading, ModalHeader, CloseBtn } from "./Modal.styled";
+import {
+  ModalStylesDesktop,
+  ModalStylesMobile,
+  Heading,
+  ModalHeader,
+  CloseBtn,
+} from "./Modal.styled";
 import LoginForm from "./LoginForm";
+import useBreakpoint from "../../utils/useBreakpoint";
 
 Modal.setAppElement("#__next");
 
@@ -13,13 +20,14 @@ interface LoginModalProps {
 
 const LoginModal = ({ isOpen, setIsOpen }: LoginModalProps) => {
   const { dictionary } = useContext(LanguageContext);
+  const { isDesktop } = useBreakpoint();
 
   return (
     <Modal
       isOpen={isOpen}
       contentLabel="Example Modal"
       onRequestClose={() => setIsOpen(false)}
-      style={ModalStyles}
+      style={isDesktop ? ModalStylesDesktop : ModalStylesMobile}
       role="dialog"
       aria-modal="true"
       aria-labelledby="modalheading"
