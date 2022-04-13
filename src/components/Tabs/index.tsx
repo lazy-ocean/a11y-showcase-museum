@@ -30,8 +30,10 @@ const Tabs = ({ title, buttons, content, id }: TabsProps) => {
   );
 
   useEffect(() => {
-    const el = document.querySelector<HTMLElement>(`#${id}_tab_${activeTab}`);
-    el?.focus();
+    if (activeTab !== 1) {
+      const el = document.querySelector<HTMLElement>(`#${id}_tab_${activeTab}`);
+      el?.focus();
+    }
   }, [activeTab]);
 
   return (
