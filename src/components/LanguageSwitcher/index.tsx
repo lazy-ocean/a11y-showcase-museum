@@ -32,6 +32,9 @@ const LanguageSwitcher = () => {
           </SecondaryButton>
         </Link>
       )}
+      <p className="visually-hidden" aria-atomic={true} aria-live="assertive">
+        {dictionary.locale}
+      </p>
     </LangWrapper>
   );
 };

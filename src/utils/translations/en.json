@@ -8,6 +8,7 @@
     "langButtonRu": "Switch to Russian version",
     "langButtonEn": "Switch to English version"
   },
+  "locale": "You're on English version",
   "login": {
     "heading": "Login",
     "email": "Email",

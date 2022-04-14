@@ -105,6 +105,7 @@ interface Meta {
 
 export interface Dictionary {
   logo: string;
+  locale: string;
   buttons: Buttons;
   search: string;
   searchSubmit: string;
