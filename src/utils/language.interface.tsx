@@ -103,12 +103,19 @@ interface Meta {
   description: string;
 }
 
+interface Search {
+  label: string;
+  submit: string;
+  hint: string;
+  suggestions: string;
+  count: string;
+}
+
 export interface Dictionary {
   logo: string;
   locale: string;
   buttons: Buttons;
-  search: string;
-  searchSubmit: string;
+  search: Search;
   login: Login;
   sections: Sections;
   menus: Menus;

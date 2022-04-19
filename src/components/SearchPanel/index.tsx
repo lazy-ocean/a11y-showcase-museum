@@ -1,23 +1,43 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { LanguageContext } from "../../utils/LanguageContext";
 import { SearchField, SearchButton, SearchForm } from "./SearchPanel.styled";
 import { AiOutlineSearch } from "react-icons/ai";
+import SearchSuggest from "./SearchSuggest";
 
 const SearchPanel = () => {
+  const [isSuggestOpen, setSuggestOpen] = useState(false);
   const { dictionary } = useContext(LanguageContext);
 
+  const handleBlur = (e: any) => {
+    if (!e.currentTarget.contains(e.relatedTarget)) {
+      setSuggestOpen(false);
+    }
+  };
+
   return (
-    <SearchForm role="search">
+    <SearchForm
+      role="search"
+      onFocus={() => setSuggestOpen(true)}
+      onBlur={handleBlur}
+    >
       <SearchField
         type="search"
-        aria-label={dictionary.search}
-        name={dictionary.search}
+        aria-label={dictionary.search.label}
+        name={dictionary.search.label}
         spellCheck="false"
-        placeholder={dictionary.search}
+        placeholder={dictionary.search.label}
+        aria-owns="#search-results"
+        isSuggestOpen={isSuggestOpen}
+        aria-describedby="search-hint"
+        role="combobox"
       />
-      <SearchButton type="submit" title={dictionary.searchSubmit}>
+      <SearchButton type="submit" title={dictionary.search.submit}>
         <AiOutlineSearch aria-hidden="true" />
       </SearchButton>
+      {isSuggestOpen && <SearchSuggest setSuggestOpen={setSuggestOpen} />}
+      <span id="search-hint" className="visually-hidden">
+        {dictionary.search.hint}
+      </span>
     </SearchForm>
   );
 };

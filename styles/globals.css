@@ -21,7 +21,7 @@ ul {
 
 *:focus {
   outline-offset: 2px;
-  outline: 3px solid rebeccapurple;
+  outline: 2px solid rebeccapurple;
   border-radius: 8px;
 }
 

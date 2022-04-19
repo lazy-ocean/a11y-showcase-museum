@@ -1,7 +1,12 @@
 {
   "logo": "The Pushkin State Museum of Fine Arts",
-  "search": "Search something",
-  "searchSubmit": "Submit",
+  "search": {
+    "label": "Search something",
+    "submit": "Submit",
+    "hint": "Use Up and Down arrows to navigate between the search suggestions",
+    "suggestions": "Suggestions",
+    "count": "Item {index} of {overall}"
+  },
   "skipToMain": "Skip to main",
   "buttons": {
     "loginButton": "Login",
