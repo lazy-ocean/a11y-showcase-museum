@@ -45,6 +45,7 @@ interface Gallery {
   fridays: string;
   mummies: string;
   egypt: string;
+  count: string;
 }
 
 interface CTAS {

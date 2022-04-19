@@ -35,7 +35,9 @@ const Gallery = () => {
       <Carousel
         enableKeyboardControls
         renderAnnounceSlideMessage={({ currentSlide }) =>
-          `${slides[currentSlide].alt}`
+          `${slides[currentSlide].alt}, ${dictionary.gallery.count
+            .replace("{index}", (currentSlide + 1).toString())
+            .replace("{overall}", slides.length.toString())}`
         }
         defaultControlsConfig={{
           nextButtonText: dictionary.gallery.next,
