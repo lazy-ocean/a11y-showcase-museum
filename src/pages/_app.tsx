@@ -3,14 +3,9 @@ import React from "react";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import theme from "../theme";
-import Main from "../components/Main";
-import Header from "../components/Header";
-import Menu from "../components/Menu";
-import { LanguageProvider } from "../utils/LanguageContext";
-import Footer from "../components/Footer";
 import { useRouter } from "next/router";
-import { dictionaryList } from "../utils/translations";
-import { Languages } from "../utils/language.interface";
+import { LanguageProvider, Languages, dictionaryList } from "@a11y/utils";
+import { Footer, Menu, Header, Main } from "@a11y/components";
 
 const MyApp = () => {
   const { locale } = useRouter();

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useKeydown = (key: string, onEvent: () => void): void => {
+export const useKeydown = (key: string, onEvent: () => void): void => {
   const handleClick = (event: KeyboardEvent): void => {
     if (event.code === "ArrowUp" || event.code === "ArrowDown")
       event.preventDefault();

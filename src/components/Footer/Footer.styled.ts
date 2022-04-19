@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { PrimaryButton } from "../Buttons/Buttons";
+import { PrimaryButton } from "@a11y/components/Buttons";
 
 export const StyledFooter = styled.footer`
   margin-top: ${({ theme }) => theme.spacing.l};

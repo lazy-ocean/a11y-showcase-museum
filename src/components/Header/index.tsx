@@ -1,20 +1,18 @@
 import React, { useState, useContext } from "react";
-import logo from "../../../public/logo.svg";
-import { LanguageContext } from "../../utils/LanguageContext";
-import SearchPanel from "../SearchPanel";
-import { StyledHeader, Logo, LoginBtn, SkipToMain } from "./Header.styled";
-import LanguageSwitcher from "../LanguageSwitcher";
 import { RiUserLine } from "react-icons/ri";
-import LoginModal from "../LoginModal";
-import useBreakpoint from "../../utils/useBreakpoint";
+import { LanguageContext, useBreakpoint } from "@a11y/utils";
+import SearchPanel from "@a11y/components/SearchPanel";
+import LanguageSwitcher from "@a11y/components/LanguageSwitcher";
+import LoginModal from "@a11y/components/LoginModal";
+import { StyledHeader, Logo, LoginBtn, SkipToMain } from "./Header.styled";
 
-const Header = () => {
+export const Header = () => {
   const { dictionary } = useContext(LanguageContext);
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const { isDesktop } = useBreakpoint();
   return (
     <StyledHeader>
-      <Logo src={logo.src} alt={dictionary.logo} />
+      <Logo src="/logo.svg" alt={dictionary.logo} />
       <SkipToMain href="#main" aria-label={dictionary.skipToMain}>
         {dictionary.skipToMain}
       </SkipToMain>

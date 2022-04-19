@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import { PrimaryButton } from "../Buttons/Buttons";
-import { LanguageContext } from "../../utils/LanguageContext";
+import { PrimaryButton } from "@a11y/components/Buttons";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
 import { CallToActionsMenu } from "./CTAPanel.styled";
 
 const CTAPanel = () => {

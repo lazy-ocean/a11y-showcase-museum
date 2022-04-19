@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../../utils/LanguageContext";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
+import { Link } from "@a11y/components/Typography";
 import { MainMenu, MenuItem } from "./Menu.styled";
-import { Link } from "../Typography";
 
-const Menu = () => {
+export const Menu = () => {
   const { dictionary } = useContext(LanguageContext);
   return (
     <MainMenu aria-label={dictionary.menus.mainMenu}>

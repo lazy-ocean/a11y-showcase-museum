@@ -1,9 +1,8 @@
 import React, { useContext } from "react";
-import { SecondaryButton } from "../Buttons/Buttons";
-import { LanguageContext } from "../../utils/LanguageContext";
-import { Languages } from "../../utils/language.interface";
-import { LangWrapper } from "./LanguageSwitcher.styled";
 import Link from "next/link";
+import { SecondaryButton } from "@a11y/components/Buttons";
+import { LanguageContext, Languages } from "@a11y/utils";
+import { LangWrapper } from "./LanguageSwitcher.styled";
 
 const LanguageSwitcher = () => {
   const { language, dictionary, setLanguage } = useContext(LanguageContext);

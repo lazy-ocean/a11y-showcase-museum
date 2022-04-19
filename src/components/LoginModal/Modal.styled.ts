@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { SecondaryButton } from "../Buttons/Buttons";
-import { PrimaryHeading } from "../Typography";
+import { SecondaryButton } from "@a11y/components/Buttons";
+import { PrimaryHeading } from "@a11y/components/Typography";
 
 export const ModalStylesDesktop = {
   content: {

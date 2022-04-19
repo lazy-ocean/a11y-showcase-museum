@@ -1,50 +1,44 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../../utils/LanguageContext";
-import Tabs, { TabsButton } from "../Tabs";
-import galleryImg from "../../../public/museum-gallery.png";
-import learningImg from "../../../public/museum-learning.png";
-import lopuchinyImg from "../../../public/museum-lopuchiny.png";
-import museionImg from "../../../public/museum-museion.png";
-import privateImg from "../../../public/museum-private.png";
-import richterImg from "../../../public/museum-richter.png";
-import Card from "../Card";
-import { RegularText } from "../Typography";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
+import Tabs, { TabsButton } from "@a11y/components/Tabs";
+import Card from "@a11y/components/Card";
+import { RegularText } from "@a11y/components/Typography";
 
 const Museums = () => {
   const { dictionary } = useContext(LanguageContext);
   const dataMap = {
     richter: {
-      img: richterImg.src,
+      img: "/museum-richter.png",
       title: dictionary.museums.richter.title,
       address: dictionary.museums.richter.description,
       cta: dictionary.museums.cta,
     },
     museion: {
-      img: museionImg.src,
+      img: "/museum-museion.png",
       title: dictionary.museums.museion.title,
       address: dictionary.museums.museion.description,
       cta: dictionary.museums.cta,
     },
     lopuchiny: {
-      img: lopuchinyImg.src,
+      img: "/museum-lopuchiny.png",
       title: dictionary.museums.lopuchiny.title,
       address: dictionary.museums.lopuchiny.description,
       cta: dictionary.museums.cta,
     },
     learning: {
-      img: learningImg.src,
+      img: "/museum-learning.png",
       title: dictionary.museums.learning.title,
       address: dictionary.museums.learning.description,
       cta: dictionary.museums.cta,
     },
     privates: {
-      img: privateImg.src,
+      img: "/museum-private.png",
       title: dictionary.museums.privates.title,
       address: dictionary.museums.privates.description,
       cta: dictionary.museums.cta,
     },
     gallery: {
-      img: galleryImg.src,
+      img: "/museum-gallery.png",
       title: dictionary.museums.gallery.title,
       address: dictionary.museums.gallery.description,
       cta: dictionary.museums.cta,

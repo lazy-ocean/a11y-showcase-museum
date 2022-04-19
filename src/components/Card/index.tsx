@@ -4,7 +4,7 @@ import {
   TertiaryHeading,
   RegularText,
   Link,
-} from "../Typography";
+} from "@a11y/components/Typography";
 import { StyledCard } from "./Card.styled";
 
 interface CardProps {

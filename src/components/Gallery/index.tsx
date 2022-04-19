@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
 import Carousel from "nuka-carousel";
-import { Slide, SlideButton } from "./Gallery.styled";
-import { LanguageContext } from "../../utils/LanguageContext";
 import { GrNext, GrPrevious } from "react-icons/gr";
-import heroBanner1 from "../../../public/hero-banner1.jpeg";
-import heroBanner2 from "../../../public/hero-banner2.jpeg";
-import heroBanner3 from "../../../public/hero-banner3.jpeg";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
+import { Slide, SlideButton } from "./Gallery.styled";
 
 interface SlideInterface {
   alt: string;
@@ -18,15 +15,15 @@ const Gallery = () => {
   const slides: SlideInterface[] = [
     {
       alt: dictionary.gallery.fridays,
-      src: heroBanner1.src,
+      src: "/hero-banner1.jpeg",
     },
     {
       alt: dictionary.gallery.mummies,
-      src: heroBanner2.src,
+      src: "/hero-banner2.jpeg",
     },
     {
       alt: dictionary.gallery.egypt,
-      src: heroBanner3.src,
+      src: "/hero-banner3.jpeg",
     },
   ];
   return (

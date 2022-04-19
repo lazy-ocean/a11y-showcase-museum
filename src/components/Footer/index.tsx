@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../../utils/LanguageContext";
+import { BsFacebook, BsTelegram } from "react-icons/bs";
+import { ImMail4 } from "react-icons/im";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
+import { TertiaryHeading } from "@a11y/components/Typography";
 import {
   StyledFooter,
   FooterMenu,
   SocialMedia,
   FooterMenuLink,
 } from "./Footer.styled";
-import { BsFacebook, BsTelegram } from "react-icons/bs";
-import { ImMail4 } from "react-icons/im";
-import { TertiaryHeading } from "../Typography";
 import SubscriptionForm from "./SubscriptionForm";
 
 interface FooterMenuItem {
@@ -17,7 +17,7 @@ interface FooterMenuItem {
   icon?: React.ReactElement;
 }
 
-const Footer = () => {
+export const Footer = () => {
   const { dictionary } = useContext(LanguageContext);
 
   const footerMenuItems: FooterMenuItem[] = [

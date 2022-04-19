@@ -1,6 +1,6 @@
 import React, { Dispatch, useContext } from "react";
-import { LanguageContext } from "../../utils/LanguageContext";
 import Modal from "react-modal";
+import { LanguageContext, useBreakpoint } from "@a11y/utils";
 import {
   ModalStylesDesktop,
   ModalStylesMobile,
@@ -9,7 +9,6 @@ import {
   CloseBtn,
 } from "./Modal.styled";
 import LoginForm from "./LoginForm";
-import useBreakpoint from "../../utils/useBreakpoint";
 
 Modal.setAppElement("#__next");
 

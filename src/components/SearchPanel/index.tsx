@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import { LanguageContext } from "../../utils/LanguageContext";
-import { SearchField, SearchButton, SearchForm } from "./SearchPanel.styled";
 import { AiOutlineSearch } from "react-icons/ai";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
+import { SearchField, SearchButton, SearchForm } from "./SearchPanel.styled";
 import SearchSuggest from "./SearchSuggest";
 
 const SearchPanel = () => {

@@ -1,11 +1,11 @@
 import React from "react";
-import Gallery from "../Gallery";
-import CTAPanel from "../CTAPanel";
-import Expositions from "../Expositions";
-import Museums from "../Museums";
+import Gallery from "@a11y/components/Gallery";
+import CTAPanel from "@a11y/components/CTAPanel";
+import Expositions from "@a11y/components/Expositions";
+import Museums from "@a11y/components/Museums";
 import { MainStyled } from "./Main.styled";
 
-const Main = () => {
+export const Main = () => {
   return (
     <MainStyled id="main">
       <Gallery />

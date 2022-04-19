@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
-import { LanguageContext } from "../../utils/LanguageContext";
+import { AiFillCheckCircle } from "react-icons/ai";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
+import { TertiaryHeading, RegularText } from "@a11y/components/Typography";
 import {
   SubscribeInput,
   SubscribeBtn,
@@ -8,8 +10,6 @@ import {
   SubscribedText,
   Wrapper,
 } from "./Footer.styled";
-import { TertiaryHeading, RegularText } from "../Typography";
-import { AiFillCheckCircle } from "react-icons/ai";
 
 const SubscriptionForm = () => {
   const [subscribed, setSubscribed] = useState<boolean>(false);

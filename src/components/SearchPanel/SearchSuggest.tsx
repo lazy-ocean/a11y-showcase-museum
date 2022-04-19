@@ -1,9 +1,7 @@
-import React, { useContext, useState } from "react";
-import { LanguageContext } from "../../utils/LanguageContext";
-import { SearchSuggestContainer, Option } from "./SearchPanel.styled";
+import React, { useContext, useState, useEffect } from "react";
 import Link from "next/link";
-import useKeydown from "../../utils/useKeydown";
-import { useEffect } from "react";
+import { useKeydown, LanguageContext } from "@a11y/utils";
+import { SearchSuggestContainer, Option } from "./SearchPanel.styled";
 
 interface SearchSuggestProps {
   setSuggestOpen: (arg0: boolean) => void;

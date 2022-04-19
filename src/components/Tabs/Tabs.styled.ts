@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SecondaryHeading } from "../Typography";
+import { SecondaryHeading } from "@a11y/components/Typography";
 
 export const TabsSection = styled.section`
   margin-top: ${({ theme }) => theme.spacing.l};

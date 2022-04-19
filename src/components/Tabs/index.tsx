@@ -1,9 +1,8 @@
-import React, { useState, useContext, useMemo } from "react";
-import { LanguageContext } from "../../utils/LanguageContext";
-import { PrimaryHeading } from "../Typography";
-import { SecondaryButton, GhostButton } from "../Buttons/Buttons";
+import React, { useState, useContext, useMemo, useEffect } from "react";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
+import { PrimaryHeading } from "@a11y/components/Typography";
+import { SecondaryButton, GhostButton } from "@a11y/components/Buttons";
 import { TabsSection, TabsButtons, TabsContent } from "./Tabs.styled";
-import { useEffect } from "react";
 
 export interface TabsButton {
   id: number;

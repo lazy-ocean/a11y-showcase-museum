@@ -13,7 +13,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "baseUrl": ".",
+    "paths": {
+      "@a11y/components": ["src/components/index.ts"],
+      "@a11y/components/*": ["src/components/*"],
+      "@a11y/utils/*": ["src/utils/*"],
+      "@a11y/utils": ["src/utils/index.ts"]
+    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".eslintrc.js"],
   "exclude": ["node_modules"]

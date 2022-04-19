@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { LanguageContext } from "../../../utils/LanguageContext";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
 import {
   LoginField,
   LoginLabel,

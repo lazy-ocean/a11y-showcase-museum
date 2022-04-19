@@ -1,31 +1,28 @@
 import React, { useContext } from "react";
-import { LanguageContext } from "../../utils/LanguageContext";
-import Tabs, { TabsButton } from "../Tabs";
-import richterImg from "../../../public/schedule-1.png";
-import tattooImg from "../../../public/schedule-2.png";
-import matisseImg from "../../../public/schedule-3.png";
-import Card from "../Card";
+import { LanguageContext } from "@a11y/utils/LanguageContext";
+import Tabs, { TabsButton } from "@a11y/components/Tabs";
+import Card from "@a11y/components/Card";
 
 const Expositions = () => {
   const { dictionary } = useContext(LanguageContext);
 
   const dataMap = {
     richter: {
-      img: richterImg.src,
+      img: "/schedule-1.png",
       title: dictionary.expositions.richter.title,
       subtitle: dictionary.expositions.richter.subtitle,
       description: dictionary.expositions.richter.description,
       cta: dictionary.expositions.cta,
     },
     tattoo: {
-      img: tattooImg.src,
+      img: "/schedule-2.png",
       title: dictionary.expositions.tattoo.title,
       subtitle: dictionary.expositions.tattoo.subtitle,
       description: dictionary.expositions.tattoo.description,
       cta: dictionary.expositions.cta,
     },
     matisse: {
-      img: matisseImg.src,
+      img: "/schedule-3.png",
       title: dictionary.expositions.matisse.title,
       subtitle: dictionary.expositions.matisse.subtitle,
       description: dictionary.expositions.matisse.description,

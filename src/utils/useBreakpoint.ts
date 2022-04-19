@@ -12,7 +12,7 @@ interface checkBreakpointProps {
   isDesktop?: boolean;
 }
 
-const useBreakpoint = (): checkBreakpointProps => {
+export const useBreakpoint = (): checkBreakpointProps => {
   const [width, setWidth] = useState<number>(0);
 
   const handleWindowSizeChange = (): void =>
