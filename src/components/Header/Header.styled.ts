@@ -18,19 +18,26 @@ export const Logo = styled.img`
   ${({ theme }) => `
   @media only screen and ${theme.breakpoints.tablet}{
     height: 4.2rem;
-  }`}
+  }`};
 `;
 
 export const LoginBtn = styled.button`
   border: none;
   background-color: transparent;
   display: flex;
-  margin-left: ${({ theme }) => theme.spacing.s};
   cursor: pointer;
+  margin-left: ${({ theme }) => theme.spacing.xs};
 
   svg {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
+    fill: ${({ theme }) => theme.palette.text};
+
+    ${({ theme }) => `
+    @media only screen and ${theme.breakpoints.desktop} {
+      width: 3rem;
+      height: 3rem;
+    }`}
   }
 
   ${({ theme }) => `
@@ -45,7 +52,8 @@ export const SkipToMain = styled.a`
   transform: translateY(-300%);
   display: block;
   overflow: hidden;
-  background-color: white;
+  background-color: ${({ theme }) => theme.palette.grey};
+  color: ${({ theme }) => theme.palette.text};
   left: 40%;
   z-index: 10;
 

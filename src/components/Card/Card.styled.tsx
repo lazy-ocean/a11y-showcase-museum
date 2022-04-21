@@ -17,7 +17,7 @@ export const StyledCard = styled.article`
     transition: all 0.2s;
     a,
     h2 {
-      color: ${({ theme }) => theme.palette.mainPurple};
+      color: ${({ theme }) => theme.palette.primary};
     }
   }
 `;

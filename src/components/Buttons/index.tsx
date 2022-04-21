@@ -25,12 +25,12 @@ export const PrimaryButton = styled.button`
   ${Button};
 
   ${({ theme }) => `
-    background-color: ${theme.palette.mainPurple};
+    background-color: ${theme.palette.primary};
     color: ${theme.palette.white};
 
     &:hover {
       transition: background-color 0.4s ease-out;
-      background-color: ${theme.palette.darkPurple};
+      background-color: ${theme.palette.primaryDark};
     }
   `};
 `;
@@ -39,12 +39,9 @@ export const SecondaryButton = styled.button`
   ${Button};
 
   ${({ theme }) => `
-    background-color: ${theme.palette.secondaryPurple};
-    color: ${theme.palette.dark};
-
+  background-color: ${theme.palette.primaryLight};
     &:hover {
       transition: background-color 0.4s ease-out;
-      background-color: ${theme.palette.lightPurple};
     }
   `};
 `;
@@ -55,11 +52,10 @@ export const GhostButton = styled.button`
 
   ${({ theme }) => `
     background-color: transparent;
-    color: ${theme.palette.dark};
-
+    color: ${theme.palette.text};
     &:hover {
       text-decoration-style: dashed;
-      color: ${theme.palette.mainPurple};
+      color: ${theme.palette.primary};
     }
   `};
 `;

@@ -1,11 +1,22 @@
+import { createGlobalStyle, DefaultTheme } from "styled-components";
+
+declare module "styled-components" {
+  export interface DefaultTheme {
+    palette: Palette;
+    breakpoints: Breakpoints;
+    spacing: Spacings;
+    radius: string;
+  }
+}
+
 interface Palette {
-  darkPurple: string;
-  mainPurple: string;
-  lightPurple: string;
-  secondaryPurple: string;
+  primary: string;
+  primaryLight: string;
+  primaryDark: string;
+  bg: string;
+  bgLight: string;
+  text: string;
   white: string;
-  dark: string;
-  lightBG: string;
   grey: string;
 }
 
@@ -24,23 +35,16 @@ interface Spacings {
   xxl: string;
 }
 
-interface Theme {
-  palette: Palette;
-  breakpoints: Breakpoints;
-  spacing: Spacings;
-  radius: string;
-}
-
-const theme: Theme = {
+export const theme: DefaultTheme = {
   palette: {
-    darkPurple: "#46119e",
-    mainPurple: "#5D16D5",
-    lightPurple: "#b4b1e6",
-    secondaryPurple: "#C7D2E9",
-    white: "#ffffff",
-    dark: "#242424",
-    lightBG: "#F9F9FB",
-    grey: "#F1F1F1",
+    primary: "#5D16D5",
+    primaryLight: "#b4b1e6",
+    primaryDark: "#44299a",
+    bg: "#f5f5f5",
+    text: "#1b1b1b",
+    white: "#dedede",
+    grey: "#c1c1c1",
+    bgLight: "#fcfcfc",
   },
   breakpoints: {
     mobile: `(min-width: 600px)`,
@@ -58,4 +62,38 @@ const theme: Theme = {
   radius: "8px",
 };
 
-export default theme;
+export const lightTheme = {
+  ...theme,
+  palette: {
+    primary: "#5D16D5",
+    primaryLight: "#b4b1e6",
+    primaryDark: "#44299a",
+    bg: "#f5f5f5",
+    text: "#1b1b1b",
+    white: "#fcfcfc",
+    grey: "#e8e8e8",
+    bgLight: "#fcfcfc",
+  },
+};
+
+export const darkTheme = {
+  ...theme,
+  palette: {
+    primary: "#5D16D5",
+    primaryLight: "#b4b1e6",
+    primaryDark: "#44299a",
+    bg: "#121212",
+    bgLight: "#383838",
+    text: "#dedede",
+    white: "#dedede",
+    grey: "#323232",
+  },
+};
+
+export const GlobalStyles = createGlobalStyle`
+  body {
+    background-color: ${({ theme }) => theme.palette.bg};
+    color: ${({ theme }) => theme.palette.text};
+    transition: background-color 0.5s ease-in-out;
+  }
+`;

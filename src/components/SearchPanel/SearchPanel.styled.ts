@@ -14,9 +14,11 @@ export const SearchField = styled.input<SearchFieldProps>`
   border-radius: ${({ isSuggestOpen, theme }) =>
     !isSuggestOpen ? theme.radius : `${theme.radius} ${theme.radius} 0 0`};
   width: 100%;
-  border: 1px solid #c7d2e9;
+  border: 1px solid #b8b8b8;
   ${({ isSuggestOpen }) => isSuggestOpen && "border-bottom: 0"};
   padding: ${({ theme }) => theme.spacing.s};
+  background-color: ${({ theme }) => theme.palette.bgLight};
+  transition: background-color 0.5s ease-in-out;
 `;
 
 export const SearchButton = styled.button`
@@ -29,12 +31,13 @@ export const SearchButton = styled.button`
   svg {
     height: 20px;
     width: 20px;
+    fill: ${({ theme }) => theme.palette.text};
   }
 `;
 
 export const SearchSuggestContainer = styled.div`
   position: absolute;
-  background-color: white;
+  background-color: ${({ theme }) => theme.palette.bg};
   padding: ${({ theme }) => theme.spacing.s};
   list-style-type: none;
   gap: 1rem;
@@ -48,6 +51,6 @@ export const SearchSuggestContainer = styled.div`
 export const Option = styled.li`
   span {
     font-size: 0.8rem;
-    color: ${({ theme }) => theme.palette.mainPurple};
+    color: ${({ theme }) => theme.palette.primary};
   }
 `;

@@ -38,7 +38,7 @@ export const FooterMenuLink = styled.a`
   border-bottom: 2px dashed transparent;
 
   &:hover {
-    border-bottom: 2px dashed ${({ theme }) => theme.palette.mainPurple};
+    border-bottom: 2px dashed ${({ theme }) => theme.palette.primary};
   }
 `;
 
@@ -55,7 +55,7 @@ export const SocialMedia = styled.ul`
     transition: fill 0.2s;
 
     &:hover {
-      fill: ${({ theme }) => theme.palette.mainPurple};
+      fill: ${({ theme }) => theme.palette.primary};
     }
 
     ${({ theme }) => `

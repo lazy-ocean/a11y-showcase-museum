@@ -24,14 +24,14 @@ export const MenuItem = styled.li`
   a {
     padding-bottom: 5px;
     text-decoration: none;
-    border-bottom: 2px solid ${({ theme }) => theme.palette.mainPurple};
+    border-bottom: 2px solid ${({ theme }) => theme.palette.primary};
 
     &:hover {
-      border-bottom: 2.5px dashed ${({ theme }) => theme.palette.mainPurple};
+      border-bottom: 2.5px dashed ${({ theme }) => theme.palette.primary};
     }
   }
 
   &:hover {
-    color: ${({ theme }) => theme.palette.mainPurple};
+    color: ${({ theme }) => theme.palette.primary};
   }
 `;
