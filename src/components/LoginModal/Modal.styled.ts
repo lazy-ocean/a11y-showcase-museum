@@ -2,37 +2,31 @@ import styled from "styled-components";
 import { SecondaryButton } from "@a11y/components/Buttons";
 import { PrimaryHeading } from "@a11y/components/Typography";
 
-export const ModalStylesDesktop = {
-  content: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    padding: "3rem",
-    height: "max-content",
-    borderRadius: "8px",
-    width: "60%",
-  },
-  overlay: {
-    backgroundColor: "#0000006E",
-    zIndex: 100,
-  },
-};
+export const ModalContent = styled.div`
+  background: ${({ theme }) => theme.palette.grey};
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2.5rem;
+  width: 85%;
+  height: max-content;
+  border-radius: 8px;
+  position: absolute;
 
-export const ModalStylesMobile = {
-  content: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    padding: "2.5rem",
-    height: "max-content",
-    borderRadius: "8px",
-    width: "85%",
-  },
-  overlay: {
-    backgroundColor: "#0000006E",
-    zIndex: 100,
-  },
-};
+  ${({ theme }) => `
+  @media only screen and ${theme.breakpoints.tablet}{
+    padding: 3rem;
+    width: 50%;
+  }`}
+`;
+
+export const Overlay = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+`;
 
 export const LoginField = styled.div`
   display: flex;
@@ -51,7 +45,8 @@ export const LoginInput = styled.input`
   border: 1px solid #c7d2e9;
   padding: ${({ theme }) => theme.spacing.s};
   font-size: 1rem;
-  background-color: ${({ theme }) => theme.palette.lightBG};
+  background-color: ${({ theme }) => theme.palette.bgLight};
+  color: ${({ theme }) => theme.palette.text};
 `;
 
 export const ErrorMessage = styled.span`
@@ -78,4 +73,8 @@ export const CloseBtn = styled.button`
   background-color: transparent;
   cursor: pointer;
   font-size: 2rem;
+
+  svg {
+    fill: ${({ theme }) => theme.palette.text};
+  }
 `;

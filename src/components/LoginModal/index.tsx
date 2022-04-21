@@ -1,14 +1,15 @@
 import React, { Dispatch, useContext } from "react";
 import Modal from "react-modal";
-import { LanguageContext, useBreakpoint } from "@a11y/utils";
+import { LanguageContext } from "@a11y/utils";
 import {
-  ModalStylesDesktop,
-  ModalStylesMobile,
   Heading,
   ModalHeader,
   CloseBtn,
+  ModalContent,
+  Overlay,
 } from "./Modal.styled";
 import LoginForm from "./LoginForm";
+import { IoMdClose } from "react-icons/io";
 
 Modal.setAppElement("#__next");
 
@@ -19,17 +20,23 @@ interface LoginModalProps {
 
 const LoginModal = ({ isOpen, setIsOpen }: LoginModalProps) => {
   const { dictionary } = useContext(LanguageContext);
-  const { isDesktop } = useBreakpoint();
 
   return (
     <Modal
+      className="_"
+      overlayClassName="_"
       isOpen={isOpen}
       contentLabel="Example Modal"
       onRequestClose={() => setIsOpen(false)}
-      style={isDesktop ? ModalStylesDesktop : ModalStylesMobile}
       role="dialog"
       aria-modal="true"
       aria-labelledby="modalheading"
+      contentElement={(props, children) => (
+        <ModalContent {...props}>{children}</ModalContent>
+      )}
+      overlayElement={(props, contentElement) => (
+        <Overlay {...props}>{contentElement}</Overlay>
+      )}
     >
       <ModalHeader>
         <Heading id="modalheading">{dictionary.login.heading}</Heading>
@@ -38,7 +45,7 @@ const LoginModal = ({ isOpen, setIsOpen }: LoginModalProps) => {
           title={dictionary.login.close}
           onClick={() => setIsOpen(false)}
         >
-          X
+          <IoMdClose />
         </CloseBtn>
       </ModalHeader>
       <LoginForm />

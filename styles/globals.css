@@ -38,3 +38,7 @@ ul {
 .carousel .control-arrow:focus {
   outline: 3px solid rebeccapurple !important;
 }
+
+.scroll-lock {
+  overflow: hidden;
+}
