@@ -7,6 +7,12 @@
     "suggestions": "Suggestions",
     "count": "Item {index} of {overall}"
   },
+  "theme": {
+    "light": "Switch to light theme",
+    "dark": "Switch to dark theme",
+    "lightA": "You're on a light theme",
+    "darkA": "You're on a dark theme"
+  },
   "skipToMain": "Skip to main",
   "buttons": {
     "loginButton": "Login",

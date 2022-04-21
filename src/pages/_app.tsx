@@ -2,15 +2,17 @@ import "../../styles/globals.css";
 import React from "react";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
-import theme from "../theme";
+import { lightTheme, darkTheme } from "../theme";
 import { useRouter } from "next/router";
 import { LanguageProvider, Languages, dictionaryList } from "@a11y/utils";
 import { Footer, Menu, Header, Main } from "@a11y/components";
+import { GlobalStyles } from "../theme";
+import useTheme, { ThemeType } from "@a11y/utils/useTheme";
 
 const MyApp = () => {
   const { locale } = useRouter();
-
   const customStyle = "#gallery {display:none;}";
+  const { theme, setTheme } = useTheme();
 
   return (
     <>
@@ -33,9 +35,10 @@ const MyApp = () => {
           <style>{customStyle}</style>
         </noscript>
       </Head>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme === ThemeType.light ? lightTheme : darkTheme}>
+        <GlobalStyles />
         <LanguageProvider>
-          <Header />
+          <Header theme={theme} setTheme={setTheme} />
           <Menu />
           <Main />
           <Footer />

@@ -1,23 +1,43 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { RiUserLine } from "react-icons/ri";
 import { LanguageContext, useBreakpoint } from "@a11y/utils";
 import SearchPanel from "@a11y/components/SearchPanel";
 import LanguageSwitcher from "@a11y/components/LanguageSwitcher";
 import LoginModal from "@a11y/components/LoginModal";
 import { StyledHeader, Logo, LoginBtn, SkipToMain } from "./Header.styled";
+import ThemeSwitcher from "../ThemeSwitcher";
+import { ThemeType } from "@a11y/utils/useTheme";
 
-export const Header = () => {
+interface HeaderProps {
+  theme: ThemeType;
+  setTheme: (arg0: ThemeType) => void;
+}
+
+export const Header = ({ theme, setTheme }: HeaderProps) => {
   const { dictionary } = useContext(LanguageContext);
   const [modalIsOpen, setIsModalOpen] = useState(false);
   const { isDesktop } = useBreakpoint();
+
+  useEffect(() => {
+    if (modalIsOpen) {
+      document.body.classList.add("scroll-lock");
+    } else {
+      document.body.classList.remove("scroll-lock");
+    }
+  }, [modalIsOpen]);
+
   return (
     <StyledHeader>
-      <Logo src="/logo.svg" alt={dictionary.logo} />
+      <Logo
+        src={theme === ThemeType.light ? "/logo-dark.svg" : "/logo-light.svg"}
+        alt={dictionary.logo}
+      />
       <SkipToMain href="#main" aria-label={dictionary.skipToMain}>
         {dictionary.skipToMain}
       </SkipToMain>
       {isDesktop && <SearchPanel />}
       <LanguageSwitcher />
+      <ThemeSwitcher theme={theme} setTheme={setTheme} />
       <LoginBtn
         aria-label={dictionary.buttons.loginButton}
         onClick={() => setIsModalOpen(true)}

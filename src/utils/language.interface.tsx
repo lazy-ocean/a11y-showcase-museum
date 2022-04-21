@@ -112,6 +112,13 @@ interface Search {
   count: string;
 }
 
+interface Theme {
+  light: string;
+  dark: string;
+  lightA: string;
+  darkA: string;
+}
+
 export interface Dictionary {
   logo: string;
   locale: string;
@@ -127,6 +134,7 @@ export interface Dictionary {
   footer: Footer;
   meta?: Meta;
   skipToMain: string;
+  theme: Theme;
 }
 
 export interface Dictionaries {
