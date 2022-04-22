@@ -64,7 +64,7 @@ interface Card {
   title: string;
   subtitle?: string;
   description: string;
-  schedule: Schedule[];
+  schedule?: (string | Schedule)[];
 }
 
 export enum ExpositionsNames {

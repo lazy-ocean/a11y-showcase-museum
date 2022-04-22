@@ -29,7 +29,7 @@ const Expositions = () => {
         cta={dictionary.expositions.cta}
       />
     ),
-    ids: dictionary.expositions[item].schedule,
+    ids: dictionary.expositions[item]?.schedule || [],
   }));
 
   return (
