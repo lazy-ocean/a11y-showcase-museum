@@ -54,16 +54,29 @@ interface CTAS {
   shop: string;
 }
 
+export enum Schedule {
+  all = "all",
+  now = "now",
+  planned = "planned",
+}
+
 interface Card {
   title: string;
   subtitle?: string;
   description: string;
+  schedule: Schedule[];
+}
+
+export enum ExpositionsNames {
+  richter = "richter",
+  tattoo = "tattoo",
+  matisse = "matisse",
 }
 
 interface Expositions {
-  richter: Card;
-  tattoo: Card;
-  matisse: Card;
+  [ExpositionsNames.richter]: Card;
+  [ExpositionsNames.tattoo]: Card;
+  [ExpositionsNames.matisse]: Card;
   cta: string;
   show: string;
   all: string;

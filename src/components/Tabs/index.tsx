@@ -5,13 +5,13 @@ import { SecondaryButton, GhostButton } from "@a11y/components/Buttons";
 import { TabsSection, TabsButtons, TabsContent } from "./Tabs.styled";
 
 export interface TabsButton {
-  id: number;
+  id: number | string;
   title: string;
 }
 
 export interface TabsContent {
   content: React.ReactElement;
-  ids: number[];
+  ids: (number | string)[];
 }
 interface TabsProps {
   title: string;

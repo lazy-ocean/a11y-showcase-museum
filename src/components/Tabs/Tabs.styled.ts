@@ -43,7 +43,9 @@ export const TabsContent = styled.div<TabsContentProps>`
   img {
     height: 14rem;
     width: 100%;
+  }
+
+  .cover {
     object-fit: cover;
-    object-position: top;
   }
 `;
