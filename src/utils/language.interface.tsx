@@ -84,13 +84,22 @@ interface Expositions {
   planned: string;
 }
 
+export enum MuseumsNames {
+  richter = "richter",
+  museion = "museion",
+  main = "main",
+  learning = "learning",
+  private = "private",
+  gallery = "gallery",
+}
+
 interface Museums {
-  richter: Card;
-  museion: Card;
-  lopuchiny: Card;
-  learning: Card;
-  privates: Card;
-  gallery: Card;
+  [MuseumsNames.richter]: Card;
+  [MuseumsNames.museion]: Card;
+  [MuseumsNames.main]: Card;
+  [MuseumsNames.learning]: Card;
+  [MuseumsNames.private]: Card;
+  [MuseumsNames.gallery]: Card;
   cta: string;
   show: string;
   buildings: string;

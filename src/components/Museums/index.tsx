@@ -3,47 +3,11 @@ import { LanguageContext } from "@a11y/utils/LanguageContext";
 import Tabs, { TabsButton } from "@a11y/components/Tabs";
 import Card from "@a11y/components/Card";
 import { RegularText } from "@a11y/components/Typography";
+import { MuseumsNames } from "@a11y/utils/language.interface";
 
 const Museums = () => {
   const { dictionary } = useContext(LanguageContext);
-  const dataMap = {
-    richter: {
-      img: "/museum-richter.png",
-      title: dictionary.museums.richter.title,
-      address: dictionary.museums.richter.description,
-      cta: dictionary.museums.cta,
-    },
-    museion: {
-      img: "/museum-museion.png",
-      title: dictionary.museums.museion.title,
-      address: dictionary.museums.museion.description,
-      cta: dictionary.museums.cta,
-    },
-    lopuchiny: {
-      img: "/museum-lopuchiny.png",
-      title: dictionary.museums.lopuchiny.title,
-      address: dictionary.museums.lopuchiny.description,
-      cta: dictionary.museums.cta,
-    },
-    learning: {
-      img: "/museum-learning.png",
-      title: dictionary.museums.learning.title,
-      address: dictionary.museums.learning.description,
-      cta: dictionary.museums.cta,
-    },
-    privates: {
-      img: "/museum-private.png",
-      title: dictionary.museums.privates.title,
-      address: dictionary.museums.privates.description,
-      cta: dictionary.museums.cta,
-    },
-    gallery: {
-      img: "/museum-gallery.png",
-      title: dictionary.museums.gallery.title,
-      address: dictionary.museums.gallery.description,
-      cta: dictionary.museums.cta,
-    },
-  };
+
   const History = (
     <>
       <RegularText
@@ -59,15 +23,28 @@ const Museums = () => {
     { id: 2, title: dictionary.museums.history },
   ];
 
-  const content = [
-    { content: <Card {...dataMap.richter} />, ids: [1] },
-    { content: <Card {...dataMap.museion} />, ids: [1] },
-    { content: <Card {...dataMap.lopuchiny} />, ids: [1] },
-    { content: <Card {...dataMap.learning} />, ids: [1] },
-    { content: <Card {...dataMap.privates} />, ids: [1] },
-    { content: <Card {...dataMap.gallery} />, ids: [1] },
-    { content: History, ids: [2] },
+  const dataMap: MuseumsNames[] = [
+    MuseumsNames.main,
+    MuseumsNames.richter,
+    MuseumsNames.museion,
+    MuseumsNames.gallery,
+    MuseumsNames.learning,
+    MuseumsNames.private,
   ];
+
+  const museumsComponents = dataMap.map((item) => ({
+    content: (
+      <Card
+        img={`/museum-${item}.svg`}
+        title={dictionary.museums[item].title}
+        address={dictionary.museums[item].description}
+        cta={dictionary.museums.cta}
+      />
+    ),
+    ids: [1],
+  }));
+
+  const content = [...museumsComponents, { content: History, ids: [2] }];
   return (
     <Tabs
       title={dictionary.sections.expositions}
