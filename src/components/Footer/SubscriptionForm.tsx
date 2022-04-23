@@ -9,6 +9,7 @@ import {
   Checkbox,
   SubscribedText,
   Wrapper,
+  Form,
 } from "./Footer.styled";
 
 const SubscriptionForm = () => {
@@ -23,7 +24,7 @@ const SubscriptionForm = () => {
   return !subscribed ? (
     <form onSubmit={handleSubscribe}>
       <TertiaryHeading>{dictionary.footer.subscribeHeader}</TertiaryHeading>
-      <Wrapper>
+      <Form>
         <ColumnWrapper>
           <SubscribeInput
             type="email"
@@ -46,7 +47,7 @@ const SubscriptionForm = () => {
           </Wrapper>
         </ColumnWrapper>
         <SubscribeBtn type="submit">{dictionary.footer.subscribe}</SubscribeBtn>
-      </Wrapper>
+      </Form>
     </form>
   ) : (
     <SubscribedText aria-live="polite">

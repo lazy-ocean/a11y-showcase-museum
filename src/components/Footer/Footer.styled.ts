@@ -109,3 +109,7 @@ export const Wrapper = styled.div`
   align-items: center;
   padding: ${({ theme }) => theme.spacing.xs} 0;
 `;
+
+export const Form = styled(Wrapper)`
+  flex-wrap: wrap;
+`;
