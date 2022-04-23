@@ -19,6 +19,7 @@ const MyApp = () => {
       <Head>
         <meta charSet="utf-8" />
         <title>{dictionaryList[locale as Languages]?.meta?.title}</title>
+        <meta name="title" content="The Pushkin Museum | Пушкинский музей" />
         <meta
           name="description"
           content={dictionaryList[locale as Languages]?.meta?.description}
@@ -28,6 +29,16 @@ const MyApp = () => {
           content={dictionaryList[locale as Languages]?.meta?.title}
           key="title"
         />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://a11y-showcase-museum.vercel.app/"
+        />
+        <meta
+          property="og:description"
+          content={dictionaryList[locale as Languages]?.meta?.description}
+        />
+        <meta property="og:image" content="/og-meta-image.png" />
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
