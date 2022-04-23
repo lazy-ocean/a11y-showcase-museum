@@ -27,9 +27,9 @@ const Card = ({
   const ifJpg = img.split(".")[1] !== "svg";
 
   return (
-    <StyledCard tabIndex={0} aria-label={title} role="tabpanel">
+    <StyledCard tabIndex={0} aria-label={title} role="listitem">
       <img src={img} alt={title} className={ifJpg ? "cover" : undefined} />
-      <SecondaryHeading id="id">{title}</SecondaryHeading>
+      <SecondaryHeading>{title}</SecondaryHeading>
       {subtitle && <TertiaryHeading>{subtitle}</TertiaryHeading>}
       {address && <RegularText as="address">{address}</RegularText>}
       {description && <RegularText>{description}</RegularText>}

@@ -64,6 +64,7 @@ const Tabs = ({ title, buttons, content, id }: TabsProps) => {
         id={`${id}_tab_panel_${activeTab}`}
         aria-labelledby={`${id}_tab_${activeTab}`}
         oneColumn={activeContent.length === 1}
+        role="list"
       >
         {activeContent.map((c, i) => (
           <React.Fragment key={`tab-${i}`}>{c.content}</React.Fragment>

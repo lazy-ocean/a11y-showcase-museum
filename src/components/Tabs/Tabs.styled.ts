@@ -18,11 +18,12 @@ interface TabsContentProps {
   oneColumn?: boolean;
 }
 
-export const TabsContent = styled.div<TabsContentProps>`
+export const TabsContent = styled.ul<TabsContentProps>`
   display: grid;
   grid-template-columns: ${({ oneColumn }) =>
     oneColumn ? "1fr" : "repeat(auto-fit, minmax(300px, 1fr))"};
   gap: ${({ theme }) => theme.spacing.m};
+  padding: 0;
 
   ${({ theme, oneColumn }) => `
   @media only screen and ${theme.breakpoints.desktop}{

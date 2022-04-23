@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const StyledCard = styled.article`
+export const StyledCard = styled.li`
   cursor: default;
 
   a {

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainMenu = styled.menu`
+export const MainMenu = styled.ul`
   display: flex;
   gap: ${({ theme }) => theme.spacing.m};
   padding: 0 ${({ theme }) => theme.spacing.m};

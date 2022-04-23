@@ -26,10 +26,11 @@ const SearchPanel = () => {
         name={dictionary.search.label}
         spellCheck="false"
         placeholder={dictionary.search.label}
-        aria-owns="#search-results"
+        aria-owns="search-results"
         isSuggestOpen={isSuggestOpen}
         aria-describedby="search-hint"
         role="combobox"
+        aria-expanded={isSuggestOpen}
       />
       <SearchButton type="submit" title={dictionary.search.submit}>
         <AiOutlineSearch aria-hidden="true" />
