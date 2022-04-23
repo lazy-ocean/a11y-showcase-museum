@@ -12,11 +12,10 @@ declare module "styled-components" {
 interface Palette {
   primary: string;
   primaryLight: string;
-  primaryDark: string;
   bg: string;
   bgLight: string;
   text: string;
-  white: string;
+  contrastText: string;
   grey: string;
 }
 
@@ -39,10 +38,9 @@ export const theme: DefaultTheme = {
   palette: {
     primary: "#5D16D5",
     primaryLight: "#b4b1e6",
-    primaryDark: "#44299a",
     bg: "#f5f5f5",
     text: "#1b1b1b",
-    white: "#dedede",
+    contrastText: "#dedede",
     grey: "#c1c1c1",
     bgLight: "#fcfcfc",
   },
@@ -67,10 +65,9 @@ export const lightTheme = {
   palette: {
     primary: "#5D16D5",
     primaryLight: "#b4b1e6",
-    primaryDark: "#44299a",
     bg: "#f5f5f5",
     text: "#1b1b1b",
-    white: "#fcfcfc",
+    contrastText: "#fcfcfc",
     grey: "#e8e8e8",
     bgLight: "#fcfcfc",
   },
@@ -79,13 +76,12 @@ export const lightTheme = {
 export const darkTheme = {
   ...theme,
   palette: {
-    primary: "#5D16D5",
+    primary: "#B690F9",
     primaryLight: "#b4b1e6",
-    primaryDark: "#44299a",
     bg: "#121212",
     bgLight: "#383838",
     text: "#dedede",
-    white: "#dedede",
+    contrastText: "#121212",
     grey: "#323232",
   },
 };

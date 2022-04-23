@@ -11,6 +11,11 @@ export const Button = styled.button`
     width: 2rem;
     height: 2rem;
     fill: ${({ theme }) => theme.palette.text};
+    transition: fill 0.3s ease-in-out;
+
+    &:hover {
+      fill: ${({ theme }) => theme.palette.primary};
+    }
 
     ${({ theme }) => `
     @media only screen and ${theme.breakpoints.desktop} {

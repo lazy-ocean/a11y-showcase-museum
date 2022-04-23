@@ -19,7 +19,7 @@ export const MainMenu = styled.ul`
 `;
 
 export const MenuItem = styled.li`
-  transition: border-bottom 0.4s;
+  transition: border-bottom 0.5s ease-in-out;
 
   a {
     padding-bottom: 5px;

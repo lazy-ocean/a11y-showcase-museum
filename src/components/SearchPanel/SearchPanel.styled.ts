@@ -19,6 +19,7 @@ export const SearchField = styled.input<SearchFieldProps>`
   padding: ${({ theme }) => theme.spacing.s};
   background-color: ${({ theme }) => theme.palette.bgLight};
   transition: background-color 0.5s ease-in-out;
+  color: ${({ theme }) => theme.palette.text};
 `;
 
 export const SearchButton = styled.button`

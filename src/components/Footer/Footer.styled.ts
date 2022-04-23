@@ -53,6 +53,8 @@ export const SocialMedia = styled.ul`
     width: 30px;
     height: 30px;
     transition: fill 0.2s;
+    fill: ${({ theme }) => theme.palette.text};
+    transition: fill 0.3s ease-in-out;
 
     &:hover {
       fill: ${({ theme }) => theme.palette.primary};
@@ -75,6 +77,7 @@ export const SubscribeInput = styled.input`
   margin-left: 0;
   font-size: 1rem;
   flex-grow: 1;
+  color: ${({ theme }) => theme.palette.text};
 `;
 
 export const SubscribeBtn = styled(PrimaryButton)`

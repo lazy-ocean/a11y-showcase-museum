@@ -26,23 +26,25 @@ export const PrimaryButton = styled.button`
 
   ${({ theme }) => `
     background-color: ${theme.palette.primary};
-    color: ${theme.palette.white};
+    color: ${theme.palette.contrastText}; 
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out, filter 0.5s ease-in-out;
 
     &:hover {
-      transition: background-color 0.4s ease-out;
-      background-color: ${theme.palette.primaryDark};
+      filter: brightness(1.3);
     }
   `};
 `;
 
 export const SecondaryButton = styled.button`
   ${Button};
+  transition: background-color 0.5s ease-in-out, filter 0.5s ease-in-out;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
 
   ${({ theme }) => `
   background-color: ${theme.palette.primaryLight};
-    &:hover {
-      transition: background-color 0.4s ease-out;
-    }
   `};
 `;
 
