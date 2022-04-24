@@ -64,8 +64,8 @@ const Gallery = () => {
             alt={alt}
             src={src}
             key={i}
-            width={1724}
-            height={1098}
+            width={1780}
+            height={1099}
             layout="responsive"
           />
         ))}

@@ -32,8 +32,8 @@ export const Header = ({ theme, setTheme }: HeaderProps) => {
       <Image
         src={theme === ThemeType.light ? "/logo-dark.svg" : "/logo-light.svg"}
         alt={dictionary.logo}
-        height="70"
-        width="270"
+        height="75"
+        width="300"
       />
       <SkipToMain href="#main" aria-label={dictionary.skipToMain}>
         {dictionary.skipToMain}
