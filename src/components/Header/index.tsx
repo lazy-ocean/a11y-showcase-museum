@@ -1,10 +1,11 @@
 import React, { useState, useContext, useEffect } from "react";
+import Image from "next/image";
 import { RiUserLine } from "react-icons/ri";
 import { LanguageContext, useBreakpoint } from "@a11y/utils";
 import SearchPanel from "@a11y/components/SearchPanel";
 import LanguageSwitcher from "@a11y/components/LanguageSwitcher";
 import LoginModal from "@a11y/components/LoginModal";
-import { StyledHeader, Logo, LoginBtn, SkipToMain } from "./Header.styled";
+import { StyledHeader, LoginBtn, SkipToMain } from "./Header.styled";
 import ThemeSwitcher from "../ThemeSwitcher";
 import { ThemeType } from "@a11y/utils/useTheme";
 
@@ -28,9 +29,11 @@ export const Header = ({ theme, setTheme }: HeaderProps) => {
 
   return (
     <StyledHeader>
-      <Logo
+      <Image
         src={theme === ThemeType.light ? "/logo-dark.svg" : "/logo-light.svg"}
         alt={dictionary.logo}
+        height="70"
+        width="270"
       />
       <SkipToMain href="#main" aria-label={dictionary.skipToMain}>
         {dictionary.skipToMain}

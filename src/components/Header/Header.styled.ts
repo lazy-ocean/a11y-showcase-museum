@@ -12,15 +12,6 @@ export const StyledHeader = styled.header`
   }`}
 `;
 
-export const Logo = styled.img`
-  height: 2rem;
-
-  ${({ theme }) => `
-  @media only screen and ${theme.breakpoints.tablet}{
-    height: 4.2rem;
-  }`};
-`;
-
 export const LoginBtn = styled.button`
   border: none;
   background-color: transparent;
