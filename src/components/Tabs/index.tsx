@@ -36,8 +36,8 @@ const Tabs = ({ title, buttons, content, id }: TabsProps) => {
   }, [activeTab]);
 
   return (
-    <TabsSection>
-      <PrimaryHeading>{title}</PrimaryHeading>
+    <TabsSection aria-label={title} role="region">
+      <PrimaryHeading id={`${id}-title`}>{title}</PrimaryHeading>
       <TabsButtons role="tablist" aria-label={title}>
         {buttons.map((b: TabsButton) => {
           const common = {

@@ -47,7 +47,7 @@ const Museums = () => {
   const content = [...museumsComponents, { content: History, ids: [2] }];
   return (
     <Tabs
-      title={dictionary.sections.expositions}
+      title={dictionary.sections.museum}
       buttons={buttons}
       content={content}
       id="msms"
