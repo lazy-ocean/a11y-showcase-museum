@@ -47,7 +47,6 @@ const Tabs = ({ title, buttons, content, id }: TabsProps) => {
             onClick: () => setActiveTab(b.id),
             id: `${id}_tab_${b.id}`,
             ariaControls: `${id}_tab_panel_${b.id}`,
-            href: `#${id}_tab_panel_${b.id}`,
           };
           return b.id === activeTab ? (
             <SecondaryButton {...common} aria-selected="true">
@@ -64,7 +63,6 @@ const Tabs = ({ title, buttons, content, id }: TabsProps) => {
         id={`${id}_tab_panel_${activeTab}`}
         aria-labelledby={`${id}_tab_${activeTab}`}
         oneColumn={activeContent.length === 1}
-        role="list"
       >
         {activeContent.map((c, i) => (
           <React.Fragment key={`tab-${i}`}>{c.content}</React.Fragment>

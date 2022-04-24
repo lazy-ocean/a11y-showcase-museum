@@ -7,7 +7,7 @@ export const Menu = () => {
   const { dictionary } = useContext(LanguageContext);
   return (
     <nav aria-label={dictionary.menus.mainMenu}>
-      <MainMenu>
+      <MainMenu aria-label={dictionary.menus.mainMenu}>
         <MenuItem>
           <Link href="#">{dictionary.sections.museum}</Link>
         </MenuItem>

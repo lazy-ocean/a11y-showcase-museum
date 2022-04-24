@@ -17,6 +17,7 @@ interface Palette {
   text: string;
   contrastText: string;
   grey: string;
+  darkGrey: string;
 }
 
 interface Breakpoints {
@@ -43,6 +44,7 @@ export const theme: DefaultTheme = {
     contrastText: "#dedede",
     grey: "#c1c1c1",
     bgLight: "#fcfcfc",
+    darkGrey: "#dedede",
   },
   breakpoints: {
     mobile: `(min-width: 600px)`,
@@ -70,6 +72,7 @@ export const lightTheme = {
     contrastText: "#fcfcfc",
     grey: "#e8e8e8",
     bgLight: "#fcfcfc",
+    darkGrey: "#1b1b1b",
   },
 };
 
@@ -83,6 +86,7 @@ export const darkTheme = {
     text: "#dedede",
     contrastText: "#121212",
     grey: "#323232",
+    darkGrey: "#1b1b1b",
   },
 };
 

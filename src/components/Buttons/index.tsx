@@ -45,6 +45,7 @@ export const SecondaryButton = styled.button`
 
   ${({ theme }) => `
   background-color: ${theme.palette.primaryLight};
+  color: ${theme.palette.darkGrey};
   `};
 `;
 

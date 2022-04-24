@@ -51,15 +51,17 @@ export const Footer = () => {
   return (
     <StyledFooter>
       <div>
-        <FooterMenu aria-label={dictionary.footer.menu}>
-          {footerMenuItems.map(({ link, label }: FooterMenuItem, i) => (
-            <li key={`footer-menu-${i}`}>
-              <FooterMenuLink href={link} aria-label={label}>
-                {label}
-              </FooterMenuLink>
-            </li>
-          ))}
-        </FooterMenu>
+        <nav aria-label={dictionary.footer.menu}>
+          <FooterMenu aria-label={dictionary.footer.menu}>
+            {footerMenuItems.map(({ link, label }: FooterMenuItem, i) => (
+              <li key={`footer-menu-${i}`}>
+                <FooterMenuLink href={link} aria-label={label}>
+                  {label}
+                </FooterMenuLink>
+              </li>
+            ))}
+          </FooterMenu>
+        </nav>
         <div>
           <TertiaryHeading>{dictionary.footer.social}</TertiaryHeading>
           <SocialMedia aria-label={dictionary.footer.social}>

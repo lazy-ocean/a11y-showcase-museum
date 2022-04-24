@@ -15,6 +15,7 @@ const LanguageSwitcher = () => {
             small
             aria-label={dictionary.buttons.langButtonRu}
             title={dictionary.buttons.langButtonRu}
+            as="a"
           >
             RU
           </SecondaryButton>
@@ -26,6 +27,7 @@ const LanguageSwitcher = () => {
             small
             aria-label={dictionary.buttons.langButtonEn}
             title={dictionary.buttons.langButtonEn}
+            as="a"
           >
             EN
           </SecondaryButton>

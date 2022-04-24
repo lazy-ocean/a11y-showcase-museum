@@ -22,7 +22,7 @@ export const StyledFooter = styled.footer`
   }`}
 `;
 
-export const FooterMenu = styled.menu`
+export const FooterMenu = styled.ul`
   list-style-type: none;
   font-size: 1.2rem;
   display: flex;
