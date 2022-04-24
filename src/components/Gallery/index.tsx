@@ -60,7 +60,14 @@ const Gallery = () => {
         renderBottomCenterControls={() => null}
       >
         {slides.map(({ alt, src }: SlideInterface, i: number) => (
-          <Slide alt={alt} src={src} key={i} />
+          <Slide
+            alt={alt}
+            src={src}
+            key={i}
+            width={1100}
+            height={700}
+            layout="responsive"
+          />
         ))}
       </Carousel>
     </section>
