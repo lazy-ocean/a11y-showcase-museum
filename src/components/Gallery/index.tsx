@@ -66,7 +66,7 @@ const Gallery = () => {
             key={i}
             width={1780}
             height={1099}
-            layout="responsive"
+            layout="intrinsic"
           />
         ))}
       </Carousel>

@@ -9,6 +9,7 @@ export const SlideButton = styled.button`
   background-color: transparent;
   border: none;
   cursor: pointer;
+  margin: 1rem;
 
   svg {
     width: 30px;

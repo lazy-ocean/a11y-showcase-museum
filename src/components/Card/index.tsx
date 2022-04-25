@@ -33,7 +33,7 @@ const Card = ({
         src={img}
         alt={title}
         className={ifJpg ? "cover" : undefined}
-        layout="responsive"
+        layout="intrinsic"
         height={200}
         width={400}
       />

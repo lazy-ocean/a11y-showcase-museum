@@ -34,6 +34,7 @@ export const Header = ({ theme, setTheme }: HeaderProps) => {
         alt={dictionary.logo}
         height="75"
         width="300"
+        layout="fixed"
       />
       <SkipToMain href="#main" aria-label={dictionary.skipToMain}>
         {dictionary.skipToMain}
