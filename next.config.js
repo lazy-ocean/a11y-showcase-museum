@@ -4,8 +4,10 @@ const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval';
   font-src 'self';
-  style-src 'unsafe-inline';
-  img-src 'self' data: https:;  
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data: https:;
+  style-src-attr 'self' 'unsafe-inline';
+  style-src-elem 'self' 'unsafe-inline';
 `;
 
 const nextConfig = {
