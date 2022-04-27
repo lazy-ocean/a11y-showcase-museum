@@ -38,28 +38,26 @@ const Gallery = () => {
     },
   ];
   return (
-    <section id="gallery">
-      <h1 className="visually-hidden">{dictionary.gallery.title}</h1>
-      <Splide
-        aria-label={dictionary.gallery.title}
-        options={{ type: "loop" }}
-        onMove={(_, index) => setCurrentIndex(index)}
-      >
-        {slides.map(({ alt, src }: SlideInterface, i: number) => (
-          <SplideSlide key={i} role="slide" aria-roledescription="">
-            <Slide
-              alt={`${alt}, ${dictionary.gallery.count
-                .replace("{index}", (currentIndex + 1).toString())
-                .replace("{overall}", slides.length.toString())}`}
-              src={src}
-              width={1780}
-              height={1099}
-              layout="intrinsic"
-            />
-          </SplideSlide>
-        ))}
-      </Splide>
-    </section>
+    <Splide
+      aria-label={dictionary.gallery.title}
+      options={{ type: "loop" }}
+      onMove={(_, index) => setCurrentIndex(index)}
+      tag="section"
+    >
+      {slides.map(({ alt, src }: SlideInterface, i: number) => (
+        <SplideSlide key={i}>
+          <Slide
+            alt={`${alt}, ${dictionary.gallery.count
+              .replace("{index}", (currentIndex + 1).toString())
+              .replace("{overall}", slides.length.toString())}`}
+            src={src}
+            width={1780}
+            height={1099}
+            layout="intrinsic"
+          />
+        </SplideSlide>
+      ))}
+    </Splide>
   );
 };
 
