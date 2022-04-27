@@ -36,7 +36,7 @@ const Tabs = ({ title, buttons, content, id }: TabsProps) => {
   }, [activeTab]);
 
   return (
-    <TabsSection aria-label={title} role="region">
+    <TabsSection aria-label={title}>
       <PrimaryHeading id={`${id}-title`}>{title}</PrimaryHeading>
       <TabsButtons role="tablist" aria-label={title}>
         {buttons.map((b: TabsButton) => {
