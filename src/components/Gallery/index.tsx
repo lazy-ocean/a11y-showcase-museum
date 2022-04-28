@@ -40,7 +40,6 @@ const Gallery = () => {
   return (
     <Splide
       aria-label={dictionary.gallery.title}
-      options={{ type: "loop" }}
       onMove={(_, index) => setCurrentIndex(index)}
       tag="section"
     >
