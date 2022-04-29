@@ -35,7 +35,8 @@ ul {
   width: 1px;
 }
 
-.carousel .control-arrow:focus {
+.splide__arrow:focus,
+.splide__pagination__page:focus {
   outline: 3px solid rebeccapurple !important;
 }
 

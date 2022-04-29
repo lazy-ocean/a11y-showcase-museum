@@ -12,6 +12,7 @@ export const ModalContent = styled.div`
   height: max-content;
   border-radius: 8px;
   position: absolute;
+  z-index: 100;
 
   ${({ theme }) => `
   @media only screen and ${theme.breakpoints.tablet}{
